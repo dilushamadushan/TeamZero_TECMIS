@@ -20,3 +20,12 @@ CREATE TABLE
         dep_id CHAR(5)
     );
 
+CREATE TABLE 
+    Course(
+        course_code char(10) PRIMARY KEY,
+        course_name varchar(20),
+        course_credit int,
+        course_houre int,
+        course_type varchar(15) NOT NULL,
+        dep_id char(5)
+    );
