@@ -29,3 +29,10 @@ CREATE TABLE
         course_type varchar(15) NOT NULL,
         dep_id char(5)
     );
+
+CREATE TABLE 
+    Lecture_Course(
+        lecture_id VARCHAR(6),
+        course_code char(10)
+    );
+
