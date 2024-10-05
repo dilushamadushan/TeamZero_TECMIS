@@ -38,4 +38,13 @@ CREATE TABLE Medical
     tech_officer_iD CHAR(10)
 );
 
+-- Create table Student_Course
+
+CREATE TABLE Student_Course
+(
+   student_id VARCHAR(6),
+   course_code char(8)
+
+);
+
 
