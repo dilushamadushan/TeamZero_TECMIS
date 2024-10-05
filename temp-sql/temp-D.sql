@@ -59,3 +59,26 @@ INSERT INTO Course VALUES
 
     ('TCS1212', 'Fundamentals of Management',2,'45','GPA','DML'),
     ('ENG1212', 'English', 2, 45, 'Non GPA', 'DML');
+
+
+INSERT INTO Student VALUES
+    ('TG-001', '123456789011', 'proper', 'DIT'),
+    ('TG-002', '123456789012', 'proper', 'DIT'),
+    ('TG-003', '123456789013', 'proper', 'DIT'),
+    ('TG-004', '123456789014', 'proper', 'DIT'),
+    ('TG-005', '123456789015', 'proper', 'DET'),
+    ('TG-006', '123456789016', 'proper', 'DBT'),
+    ('TG-007', '123456789017', 'proper', 'DBT'),
+    ('TG-008', '123456789018', 'suspended','DIT'),
+    ('TG-009', '12345678901V', 'proper', 'DIT'),
+    ('TG-010', '123456789020', 'suspended', 'DIT'),
+    ('TG-011', '123456789021', 'proper', 'DBT'),
+    ('TG-012', '123456789022', 'proper', 'DBT'),
+    ('TG-013', '123456789023', 'proper', 'DBT'),
+    ('TG-014', '123456789024', 'proper', 'DIT'),
+    ('TG-015', '123456789025', 'proper', 'DIT'),
+    ('TG-016', '12345678902V', 'proper', 'DIT'),
+    ('TG-017', '123456789027', 'suspended', 'DET'),
+    ('TG-018', '123456789028', 'suspended', 'DET'),
+    ('TG-019', '123456789029', 'proper', 'DET'),
+    ('TG-020', '12345678903V', 'proper', 'DET');
