@@ -26,3 +26,16 @@ CREATE TABLE Mark
     course_code char(8)
 );
 
+-- create table Medical 
+
+CREATE TABLE Medical
+(
+    medical_id CHAR(10) PRIMARY KEY,
+    description  VARCHAR(50),
+    s_date DATE,
+    e_date DATE,
+    student_id VARCHAR(6),
+    tech_officer_iD CHAR(10)
+);
+
+
