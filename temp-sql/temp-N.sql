@@ -27,3 +27,12 @@ CREATE TABLE Lecture_student(
     student_id VARCHAR(6)
 );
 
+-- create table notice--
+
+CREATE TABLE Notice(
+    notice_id VARCHAR(6),
+    description VARCHAR(30),
+    date DATE,
+    lecture_id VARCHAR(5)
+);
+
