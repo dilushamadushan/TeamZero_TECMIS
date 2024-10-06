@@ -115,9 +115,9 @@ The `Attendence` table stores information about Attendence.
 
 The `Notice` table stores information about Notice.
 
-| Field       | Type        | Null | Key | Default | Extra |
-|-------------|-------------|------|-----|---------|-------|
-| notice_id   | varchar(6)  | YES  |     | NULL    |       |
-| description | varchar(30) | YES  |     | NULL    |       |
-| date        | date        | YES  |     | NULL    |       |
-| lecture_id  | varchar(5)  | YES  |     | NULL    |       |
+| Field       | Type        | Null | Key | Default |
+|-------------|-------------|------|-----|---------|
+| notice_id   | varchar(6)  | YES  |     | NULL    |
+| description | varchar(30) | YES  |     | NULL    |
+| date        | date        | YES  |     | NULL    |
+| lecture_id  | varchar(5)  | YES  |     | NULL    |
