@@ -47,4 +47,15 @@ CREATE TABLE Student_Course
 
 );
 
+-- insert data  to Admin --
+
+INSERT Admin
+VALUES
+('12345678910V','A1','Administrator');
+
+
+
+
+
+
 
