@@ -19,3 +19,11 @@ CREATE TABLE Attendence(
     tech_officer_id VARCHAR(6),
     course_code CHAR(8)
 );
+
+-- create table Lecture_student--
+
+CREATE TABLE Lecture_student(
+    lecture_id VARCHAR(5),
+    student_id VARCHAR(6)
+);
+
