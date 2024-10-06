@@ -36,3 +36,9 @@ CREATE TABLE Notice(
     lecture_id VARCHAR(5)
 );
 
+-- create table Student_notice--
+
+CREATE TABLE Student_notice(
+    student_id VARCHAR(6),
+    notice_id VARCHAR(6)
+);
