@@ -10,3 +10,14 @@ CREATE TABLE User
   gender VARCHAR(5),
   bod DATE 
 );
+
+-- create table dean--
+
+
+CREATE TABLE Dean
+(
+    dean_id CHAR(5) PRIMARY KEY,
+    nic CHAR(12) 
+    
+    
+);
