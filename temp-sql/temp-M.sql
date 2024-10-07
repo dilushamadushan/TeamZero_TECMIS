@@ -21,3 +21,15 @@ CREATE TABLE Dean
     
     
 );
+
+-- create table department--
+
+
+CREATE TABLE Department
+(
+     dep_id CHAR(4) PRIMARY KEY,
+     dep_name VARCHAR(15),
+     dean_id CHAR(5),
+     admin_id VARCHAR(10)
+     
+);
