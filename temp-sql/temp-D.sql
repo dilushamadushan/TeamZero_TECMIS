@@ -82,3 +82,15 @@ INSERT INTO Student VALUES
     ('TG-018', '123456789028', 'suspended', 'D002'),
     ('TG-019', '123456789029', 'Active', 'D002'),
     ('TG-020', '12345678903V', 'Active', 'D002');
+
+INSERT INTO Lecture VALUES
+    ('LC01', '12345678111V', 'Lecture', 'D001'),
+    ('LC02', '12345678112V', 'professor', 'D001'),
+    ('LC03', '12345678113V', 'Lecture', 'D001'),
+    ('LC04', '12345678114V', 'professor', 'D001'),
+    ('LC05', '12345678115V', 'Lecture', 'D001'),
+    ('LC06', '12345678116V', 'Assistant Lecturer', 'D002'),
+    ('LC07', '12345678117V', 'Lecture', 'D004'),
+    ('LC08', '12345678118V', 'Lecture', 'D004'),
+    ('LC09', '12345678119V', 'Senior Lecturer', 'D004'),
+    ('LC10', '12345678122V', 'Lecture', 'D003');
