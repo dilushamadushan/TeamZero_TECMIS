@@ -33,3 +33,12 @@ CREATE TABLE Department
      admin_id VARCHAR(10)
      
 );
+-- create table user-contact--
+
+
+CREATE TABLE User-contact
+(
+     nic CHAR(12) PRIMARY KEY,
+     contact_no CHAR(10)
+   
+);
