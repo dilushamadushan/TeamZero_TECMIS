@@ -11,7 +11,7 @@ CREATE TABLE Technical_officer(
 -- create table Attendence--
 
 CREATE TABLE Attendence(
-    data DATE,
+    date DATE,
     att_state VARCHAR(20),
     session_type VARCHAR(25),
     student_id VARCHAR(6),
