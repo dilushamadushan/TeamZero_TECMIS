@@ -93,4 +93,18 @@ INSERT INTO Lecture VALUES
     ('LC07', '12345678117V', 'Lecture', 'D004'),
     ('LC08', '12345678118V', 'Lecture', 'D004'),
     ('LC09', '12345678119V', 'Senior Lecturer', 'D004'),
-    ('LC10', '12345678122V', 'Lecture', 'D003');
+
+INSERT INTO Lecture_Course VALUES
+('LC01','ICT1233'),
+('LC02','ICT1213'),
+('LC03','ICT1213'),
+('LC04','ICT1242'),
+('LC05','ICT1212'),
+('LC05','ICT1222'),
+('LC06','TMS2022'),
+('LC06','TMS4302'),
+('LC07','ENG1212'),
+('LC08','ENG1212'),
+('LC09','TCS1212'),
+('LC10','BST4024'),
+('LC10','BST2331');
