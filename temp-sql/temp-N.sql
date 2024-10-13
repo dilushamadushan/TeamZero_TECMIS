@@ -42,3 +42,16 @@ CREATE TABLE Student_notice(
     student_id VARCHAR(6),
     notice_id VARCHAR(6)
 );
+
+
+-- INSERT VALUE --
+
+-- insert data  to Technical_officer --
+
+INSERT INTO Technical_officer
+VALUES
+   ('TO001', '123456789V', 'Network Engineer'),
+   ('TO002', '987654321X', 'System Administrator'),
+   ('TO003', '456123789V', 'Technical Support'),
+   ('TO004', '789321456V', 'Software Developer'),
+   ('TO005', '159753486X', 'Security Analyst');
