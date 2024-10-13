@@ -95,16 +95,25 @@ INSERT INTO Lecture VALUES
     ('LC09', '12345678119V', 'Senior Lecturer', 'D004'),
 
 INSERT INTO Lecture_Course VALUES
-('LC01','ICT1233'),
-('LC02','ICT1213'),
-('LC03','ICT1213'),
-('LC04','ICT1242'),
-('LC05','ICT1212'),
-('LC05','ICT1222'),
-('LC06','TMS2022'),
-('LC06','TMS4302'),
-('LC07','ENG1212'),
-('LC08','ENG1212'),
-('LC09','TCS1212'),
-('LC10','BST4024'),
-('LC10','BST2331');
+    ('LC01','ICT1233'),
+    ('LC02','ICT1213'),
+    ('LC03','ICT1213'),
+    ('LC04','ICT1242'),
+    ('LC05','ICT1212'),
+    ('LC05','ICT1222'),
+    ('LC06','TMS2022'),
+    ('LC06','TMS4302'),
+    ('LC07','ENG1212'),
+    ('LC08','ENG1212'),
+    ('LC09','TCS1212'),
+    ('LC10','BST4024'),
+    ('LC10','BST2331');
+
+-- Create User Account --
+
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin123';
+CREATE USER 'dean'@'localhost' IDENTIFIED BY 'dean123';
+CREATE USER 'lecture'@'localhost' IDENTIFIED BY 'lecture123';
+CREATE USER 'techofficer'@'localhost' IDENTIFIED BY 'techofficer123';
+CREATE USER 'student'@'localhost' IDENTIFIED BY 'student123';
