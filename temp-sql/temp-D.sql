@@ -93,4 +93,47 @@ INSERT INTO Lecture VALUES
     ('LC07', '12345678117V', 'Lecture', 'D004'),
     ('LC08', '12345678118V', 'Lecture', 'D004'),
     ('LC09', '12345678119V', 'Senior Lecturer', 'D004'),
-    ('LC10', '12345678122V', 'Lecture', 'D003');
+
+INSERT INTO Lecture_Course VALUES
+    ('LC01','ICT1233'),
+    ('LC02','ICT1213'),
+    ('LC03','ICT1213'),
+    ('LC04','ICT1242'),
+    ('LC05','ICT1212'),
+    ('LC05','ICT1222'),
+    ('LC06','TMS2022'),
+    ('LC06','TMS4302'),
+    ('LC07','ENG1212'),
+    ('LC08','ENG1212'),
+    ('LC09','TCS1212'),
+    ('LC10','BST4024'),
+    ('LC10','BST2331');
+
+-- Create User Account --
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin123';
+CREATE USER 'dean'@'localhost' IDENTIFIED BY 'dean123';
+CREATE USER 'lecture'@'localhost' IDENTIFIED BY 'lecture123';
+CREATE USER 'techofficer'@'localhost' IDENTIFIED BY 'techofficer123';
+CREATE USER 'student'@'localhost' IDENTIFIED BY 'student123';
+
+-- PRIVILAGES AND GRANT OPTION --
+
+GRANT ALL PRIVILEGES ON teamZero.* TO 'admin'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+GRANT ALL PRIVILEGES ON teamZero.* TO 'dean'@'localhost';
+FLUSH PRIVILEGES;
+
+GRANT ALL PRIVILEGES ON teamZero.* TO 'lecturer'@'localhost';
+FLUSH PRIVILEGES;
+
+GRANT SELECT,INSERT,UPDATE ON teamZero.attendence TO 'techofficer'@'localhost';
+FLUSH PRIVILEGES;
+GRANT SELECT,INSERT,UPDATE ON teamZero.medical TO 'techofficer'@'localhost';
+FLUSH PRIVILEGES;
+
+GRANT SELECT ON teamZero.attendence TO 'student'@'localhost';
+FLUSH PRIVILEGES;
+GRANT SELECT ON teamZero.mark TO 'student'@'localhost';
+FLUSH PRIVILEGES;
