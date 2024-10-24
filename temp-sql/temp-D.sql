@@ -38,6 +38,11 @@ CREATE TABLE
 
 -- INSERT VALUE --
 
+--D001 > Department of Information & Communication Technology --
+--D002 >  Department of Engineering Technology --
+--D003 >  Department of Biosystems Technology--
+--D004 >  Department of Multidisciplinary Studies--
+
 INSERT INTO Course VALUES
     ('ICT1233', 'Server Side Web Development', 3, 45, 'GPA', 'D001'),
     ('ICT1213', 'Descrete Mathamatics', 3, 60, 'GPA', 'D001'),
@@ -84,15 +89,16 @@ INSERT INTO Student VALUES
     ('TG-020', '12345678903V', 'Active', 'D002');
 
 INSERT INTO Lecture VALUES
-    ('LC01', '12345678111V', 'Lecture', 'D001'),
-    ('LC02', '12345678112V', 'professor', 'D001'),
-    ('LC03', '12345678113V', 'Lecture', 'D001'),
-    ('LC04', '12345678114V', 'professor', 'D001'),
-    ('LC05', '12345678115V', 'Lecture', 'D001'),
-    ('LC06', '12345678116V', 'Assistant Lecturer', 'D002'),
-    ('LC07', '12345678117V', 'Lecture', 'D004'),
-    ('LC08', '12345678118V', 'Lecture', 'D004'),
-    ('LC09', '12345678119V', 'Senior Lecturer', 'D004'),
+    ('LC01', '12345678111V', 'Lecture', 'D001'),  -- sever side --
+    ('LC02', '12345678112V', 'professor', 'D001'), --descreate maths --
+    ('LC03', '12345678113V', 'Lecture', 'D001'), -- computer networking --
+    ('LC04', '12345678114V', 'professor', 'D001'), --Computer Architecher--
+    ('LC05', '12345678115V', 'Lecture', 'D001'), --dbms --
+    ('LC06', '12345678116V', 'Assistant Lecturer', 'D002'), --Physics & Calculus--
+    ('LC07', '12345678117V', 'Lecture', 'D004'), --English--
+    ('LC08', '12345678118V', 'Lecture', 'D004'), --English--
+    ('LC09', '12345678119V', 'Senior Lecturer', 'D004'), --Fundamentals of Management--
+    ('LC10', '12345678101V', 'Lecturer', 'D003'); --Fisheries--
 
 INSERT INTO Lecture_Course VALUES
     ('LC01','ICT1233'),
@@ -106,8 +112,7 @@ INSERT INTO Lecture_Course VALUES
     ('LC07','ENG1212'),
     ('LC08','ENG1212'),
     ('LC09','TCS1212'),
-    ('LC10','BST4024'),
-    ('LC10','BST2331');
+    ('LC10','BST4024');
 
 -- Create User Account --
 
