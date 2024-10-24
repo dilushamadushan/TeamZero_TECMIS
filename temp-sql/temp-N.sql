@@ -50,10 +50,10 @@ CREATE TABLE Student_notice(
 
 INSERT INTO Technical_officer
 VALUES
-   ('TO001', '123456789V', 'Network Engineer'),
-   ('TO002', '987654321X', 'System Administrator'),
+   ('TO001', '123456789V', 'Medical Administrator'),
+   ('TO002', '987654321X', 'Attendence Administrator'),
    ('TO003', '456123789V', 'Technical Support'),
-   ('TO004', '789321456V', 'Software Developer'),
+   ('TO004', '789321456V', 'System Administrator'),
    ('TO005', '159753486X', 'Security Analyst');
 
 -- INSERT VALUE --
