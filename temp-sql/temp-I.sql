@@ -230,6 +230,23 @@ VALUES
 ('M146', 47, 52, 89, 99, 98, 88, 65, 33, 'TG-020', 'TCS1212'),
 ('M147', 47, 52, 89, 99, 98, 88, 66, NULL, 'TG-020', 'ENG1212');
 
+-- inser medival--
+CREATE TABLE Medical
+-- (
+--     medical_id CHAR(10) PRIMARY KEY,
+--     description  VARCHAR(50),
+--     s_date DATE,
+--     e_date DATE,
+--     student_id VARCHAR(6),
+--     tech_officer_iD CHAR(10)
+-- );
+
+INSERT Medical
+VALUES('md1','sick','2016-01-01','2016-02-01','TG-001','TO001'),
+('md2','sick','2016-04-01','2016-04-07','TG-002','TO001'),
+('md3','sick','2016-05-05','2016-05-12','TG-003','TO001'),
+('md4','sick','2016-04-01','2016-04-10','TG-004','TO001'),
+('md5','sick','2016-06-07','2016-07-01','TG-005','TO001');
 
  
  
