@@ -55,3 +55,17 @@ VALUES
    ('TO003', '456123789V', 'Technical Support'),
    ('TO004', '789321456V', 'Software Developer'),
    ('TO005', '159753486X', 'Security Analyst');
+
+-- INSERT VALUE --
+
+-- insert data  to Notice --
+
+INSERT INTO Notice
+VALUES
+    ('N001','Faculty meeting on August 15th at 3:00 PM.','2024-08-10','LC01'),
+    ('N002','Library closure on September 20th for maintenance','2024-08-16','LC05'),
+    ('N003','Upcoming Midterm Exam Schedule', '2024-10-12','LC09'),                
+    ('N004','Class Cancellation on October 31th due to holiday','2024-10-27','LC05'),
+    ('N005','Guest Lecture on November 2st in the auditorium','2024-10-29','LC02'),
+    ('N006','Final exam schedule for the current semester','2024-11-11','LC03'),
+    ('N007','Graduation ceremony details for this year','2024-11-1','LC01');
