@@ -60,16 +60,6 @@ VALUES
 
 -- insert data  to Attendence --
 
--- CREATE TABLE Attendence(
---    date DATE,
- --   att_state VARCHAR(20),
- --   session_type VARCHAR(25),
- --   student_id VARCHAR(6),
- --   medical_id CHAR(10),
---    tech_officer_id VARCHAR(6),
---    course_code CHAR(8)
---);
-
 INSERT INTO Attendence
 VALUES
 ------------------------------------------------------------------------------------
@@ -79,25 +69,25 @@ VALUES
     ('2024-08-05', 'Present', 'Lecture', 'TG-001', NULL, 'TO001', 'ICT1233'),
     ('2024-08-05', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1233'),
     ('2024-08-05', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1233'),
-    ('2024-08-05', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1233'),
-    ('2024-08-05', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1233'),
+    ('2024-08-05', 'Absent', 'Lecture', 'TG-004', 'MD001', 'TO001', 'ICT1233'),
+    -- ('2024-08-05', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1233'), suspended student 
     ('2024-08-05', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1233'),
-    ('2024-08-05', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1233'),
+    -- ('2024-08-05', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1233'), suspended student
     ('2024-08-05', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1233'),
-    ('2024-08-05', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1233'),
+    ('2024-08-05', 'Absent', 'Lecture', 'TG-015', 'MD002', 'TO001', 'ICT1233'),
     ('2024-08-05', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1233'),
 
                             -- ET Department -- 
     ('2024-08-05', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS2022'),
-    ('2024-08-05', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS2022'),
-    ('2024-08-05', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS2022'),
+    -- ('2024-08-05', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS2022'), suspended student
+    -- ('2024-08-05', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS2022'), suspended student
     ('2024-08-05', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS2022'),
     ('2024-08-05', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS2022'),
 
                             -- BST Department --
     ('2024-08-05', 'Present', 'Lecture', 'TG-006', NULL, 'TO001', 'BST4024'),
     ('2024-08-05', 'Present', 'Lecture', 'TG-007', NULL, 'TO001', 'BST4024'),
-    ('2024-08-05', 'Present', 'Lecture', 'TG-011', NULL, 'TO001', 'BST4024'),
+    ('2024-08-05', 'Absent', 'Lecture', 'TG-011', 'MD003', 'TO001', 'BST4024'),
     ('2024-08-05', 'Present', 'Lecture', 'TG-012', NULL, 'TO001', 'BST4024'),
     ('2024-08-05', 'Present', 'Lecture', 'TG-013', NULL, 'TO001', 'BST4024'),
 
@@ -107,10 +97,10 @@ VALUES
     ('2024-08-06', 'Present', 'Lecture', 'TG-001', NULL, 'TO001', 'ICT1212'),
     ('2024-08-06', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1212'),
     ('2024-08-06', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1212'),
-    ('2024-08-06', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1212'),
-    ('2024-08-06', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1212'),
+    ('2024-08-06', 'Absent', 'Lecture', 'TG-004', 'MD001', 'TO001', 'ICT1212'),
+    -- ('2024-08-06', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1212'), suspended student
     ('2024-08-06', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1212'),
-    ('2024-08-06', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1212'),
+    -- ('2024-08-06', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1212'), suspended student
     ('2024-08-06', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1212'),
     ('2024-08-06', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1212'),
     ('2024-08-06', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1212'),
@@ -118,24 +108,24 @@ VALUES
     ('2024-08-06', 'Present', 'Practical', 'TG-002', NULL, 'TO001', 'ICT1222'),
     ('2024-08-06', 'Present', 'Practical', 'TG-003', NULL, 'TO001', 'ICT1222'),
     ('2024-08-06', 'Present', 'Practical', 'TG-004', NULL, 'TO001', 'ICT1222'),
-    ('2024-08-06', 'Present', 'Practical', 'TG-008', NULL, 'TO001', 'ICT1222'),
+    -- ('2024-08-06', 'Present', 'Practical', 'TG-008', NULL, 'TO001', 'ICT1222'), suspended student
     ('2024-08-06', 'Present', 'Practical', 'TG-009', NULL, 'TO001', 'ICT1222'),
-    ('2024-08-06', 'Present', 'Practical', 'TG-010', NULL, 'TO001', 'ICT1222'),
+    -- ('2024-08-06', 'Present', 'Practical', 'TG-010', NULL, 'TO001', 'ICT1222'), suspended student
     ('2024-08-06', 'Present', 'Practical', 'TG-014', NULL, 'TO001', 'ICT1222'),
     ('2024-08-06', 'Present', 'Practical', 'TG-015', NULL, 'TO001', 'ICT1222'),
     ('2024-08-06', 'Present', 'Practical', 'TG-016', NULL, 'TO001', 'ICT1222'),
 
                             -- ET Department -- 
     ('2024-08-06', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS4302'),
-    ('2024-08-06', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS4302'),
-    ('2024-08-06', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS4302'),
+    -- ('2024-08-06', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS4302'), suspended student
+    -- ('2024-08-06', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS4302'), suspended student
     ('2024-08-06', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS4302'),
     ('2024-08-06', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS4302'),
 
                             -- BST Department --
     ('2024-08-06', 'Present', 'Lecture', 'TG-006', NULL, 'TO001', 'BST3021'),
     ('2024-08-06', 'Present', 'Lecture', 'TG-007', NULL, 'TO001', 'BST3021'),
-    ('2024-08-06', 'Present', 'Lecture', 'TG-011', NULL, 'TO001', 'BST3021'),
+    ('2024-08-06', 'Absent', 'Lecture', 'TG-011', 'MD003', 'TO001', 'BST3021'),
     ('2024-08-06', 'Present', 'Lecture', 'TG-012', NULL, 'TO001', 'BST3021'),
     ('2024-08-06', 'Present', 'Lecture', 'TG-013', NULL, 'TO001', 'BST3021'),
 
@@ -146,24 +136,24 @@ VALUES
     ('2024-08-07', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1213'),
     ('2024-08-07', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1213'),
     ('2024-08-07', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1213'),
-    ('2024-08-07', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1213'),
+    -- ('2024-08-07', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1213'), suspended student
     ('2024-08-07', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1213'),
-    ('2024-08-07', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1213'),
+    -- ('2024-08-07', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1213'), suspended student
     ('2024-08-07', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1213'),
     ('2024-08-07', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1213'),
     ('2024-08-07', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1213'),
 
                             -- ET Department -- 
-    ('2024-08-07', 'Present', 'Practical', 'TG-005', NULL, 'TO001', 'TMS6301'),
-    ('2024-08-07', 'Present', 'Practical', 'TG-017', NULL, 'TO001', 'TMS6301'),
-    ('2024-08-07', 'Present', 'Practical', 'TG-018', NULL, 'TO001', 'TMS6301'),
+    ('2024-08-07', 'Absent', 'Practical', 'TG-005', 'MD004', 'TO001', 'TMS6301'),
+    -- ('2024-08-07', 'Present', 'Practical', 'TG-017', NULL, 'TO001', 'TMS6301'), suspended student
+    -- ('2024-08-07', 'Present', 'Practical', 'TG-018', NULL, 'TO001', 'TMS6301'), suspended student
     ('2024-08-07', 'Present', 'Practical', 'TG-019', NULL, 'TO001', 'TMS6301'),
     ('2024-08-07', 'Present', 'Practical', 'TG-020', NULL, 'TO001', 'TMS6301'),
 
                             -- BST Department --
     ('2024-08-07', 'Present', 'Lecture', 'TG-006', NULL, 'TO001', 'BST2343'),
     ('2024-08-07', 'Present', 'Lecture', 'TG-007', NULL, 'TO001', 'BST2343'),
-    ('2024-08-07', 'Present', 'Lecture', 'TG-011', NULL, 'TO001', 'BST2343'),
+    ('2024-08-07', 'Absent', 'Lecture', 'TG-011', 'MD003', 'TO001', 'BST2343'),
     ('2024-08-07', 'Present', 'Lecture', 'TG-012', NULL, 'TO001', 'BST2343'),
     ('2024-08-07', 'Present', 'Lecture', 'TG-013', NULL, 'TO001', 'BST2343'),
 
@@ -174,9 +164,9 @@ VALUES
     ('2024-08-08', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1242'),
     ('2024-08-08', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1242'),
     ('2024-08-08', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1242'),
-    ('2024-08-08', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1242'),
+    -- ('2024-08-08', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1242'), suspended student
     ('2024-08-08', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1242'),
-    ('2024-08-08', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1242'),
+    -- ('2024-08-08', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1242'), suspended student
     ('2024-08-08', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1242'),
     ('2024-08-08', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1242'),
     ('2024-08-08', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1242'),
@@ -184,23 +174,23 @@ VALUES
     ('2024-08-08', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1253'),
     ('2024-08-08', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1253'),
     ('2024-08-08', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1253'),
-    ('2024-08-08', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1253'),
+    -- ('2024-08-08', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1253'), suspended student
     ('2024-08-08', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1253'),
-    ('2024-08-08', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1253'),
+    -- ('2024-08-08', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1253'), suspended student
     ('2024-08-08', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1253'),
     ('2024-08-08', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1253'),
     ('2024-08-08', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1253'),
 
                             -- ET Department -- 
-    ('2024-08-08', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS6302'),
-    ('2024-08-08', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS6302'),
-    ('2024-08-08', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS6302'),
+    ('2024-08-08', 'Absent', 'Lecture', 'TG-005', 'MD004', 'TO001', 'TMS6302'),
+    -- ('2024-08-08', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS6302'), suspended student
+    -- ('2024-08-08', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS6302'), suspended student
     ('2024-08-08', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS6302'),
     ('2024-08-08', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS6302'),
                 -- Department of Multidisciplinary Studies --
-    ('2024-08-08', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-08', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-08', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TCS1212'),
+    ('2024-08-08', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TCS1212'), 
+    -- ('2024-08-08', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TCS1212'), suspended student
+    -- ('2024-08-08', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TCS1212'), suspended student
     ('2024-08-08', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TCS1212'),
     ('2024-08-08', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TCS1212'),
 
@@ -218,9 +208,9 @@ VALUES
     ('2024-08-09', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ENG1212'),
     ('2024-08-09', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ENG1212'),
     ('2024-08-09', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-09', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ENG1212'),
+    -- ('2024-08-09', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ENG1212'), suspended student
     ('2024-08-09', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-09', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ENG1212'),
+    -- ('2024-08-09', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ENG1212'), suspended student
     ('2024-08-09', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ENG1212'),
     ('2024-08-09', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ENG1212'),
     ('2024-08-09', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ENG1212'),
@@ -228,9 +218,9 @@ VALUES
     ('2024-08-09', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'TCS1212'),
     ('2024-08-09', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'TCS1212'),
     ('2024-08-09', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-09', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'TCS1212'),
+    -- ('2024-08-09', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'TCS1212'), suspended student
     ('2024-08-09', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-09', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'TCS1212'),
+    -- ('2024-08-09', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'TCS1212'), suspended student
     ('2024-08-09', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'TCS1212'),
     ('2024-08-09', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'TCS1212'),
     ('2024-08-09', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'TCS1212'),
@@ -241,9 +231,9 @@ VALUES
     ('2024-08-09', 'Present', 'Lecture', 'TG-013', NULL, 'TO001', 'TCS1212'),
 
                             -- ET Department -- 
-    ('2024-08-09', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS7302'),
-    ('2024-08-09', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS7302'),
-    ('2024-08-09', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS7302'),
+    ('2024-08-09', 'Absent', 'Lecture', 'TG-005', 'MD004', 'TO001', 'TMS7302'),
+    -- ('2024-08-09', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS7302'), suspended student
+    -- ('2024-08-09', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS7302'), suspended student
     ('2024-08-09', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS7302'),
     ('2024-08-09', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS7302'),
 
@@ -256,17 +246,17 @@ VALUES
     ('2024-08-12', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1233'),
     ('2024-08-12', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1233'),
     ('2024-08-12', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1233'),
-    ('2024-08-12', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1233'),
+    -- ('2024-08-12', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1233'), suspended student
     ('2024-08-12', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1233'),
-    ('2024-08-12', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1233'),
+    -- ('2024-08-12', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1233'), suspended student
     ('2024-08-12', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1233'),
     ('2024-08-12', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1233'),
     ('2024-08-12', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1233'),
 
                             -- ET Department -- 
-    ('2024-08-12', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS2022'),
-    ('2024-08-12', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS2022'),
-    ('2024-08-12', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS2022'),
+    ('2024-08-12', 'Absent', 'Lecture', 'TG-005', 'MD004', 'TO001', 'TMS2022'),
+    -- ('2024-08-12', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS2022'), suspended student
+    -- ('2024-08-12', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS2022'), suspended student
     ('2024-08-12', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS2022'),
     ('2024-08-12', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS2022'),
 
@@ -284,9 +274,9 @@ VALUES
     ('2024-08-13', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1212'),
     ('2024-08-13', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1212'),
     ('2024-08-13', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1212'),
-    ('2024-08-13', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1212'),
+    -- ('2024-08-13', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1212'), suspended student
     ('2024-08-13', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1212'),
-    ('2024-08-13', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1212'),
+    -- ('2024-08-13', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1212'), suspended student
     ('2024-08-13', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1212'),
     ('2024-08-13', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1212'),
     ('2024-08-13', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1212'),
@@ -294,17 +284,17 @@ VALUES
     ('2024-08-13', 'Present', 'Practical', 'TG-002', NULL, 'TO001', 'ICT1222'),
     ('2024-08-13', 'Present', 'Practical', 'TG-003', NULL, 'TO001', 'ICT1222'),
     ('2024-08-13', 'Present', 'Practical', 'TG-004', NULL, 'TO001', 'ICT1222'),
-    ('2024-08-13', 'Present', 'Practical', 'TG-008', NULL, 'TO001', 'ICT1222'),
+    -- ('2024-08-13', 'Present', 'Practical', 'TG-008', NULL, 'TO001', 'ICT1222'), suspended student
     ('2024-08-13', 'Present', 'Practical', 'TG-009', NULL, 'TO001', 'ICT1222'),
-    ('2024-08-13', 'Present', 'Practical', 'TG-010', NULL, 'TO001', 'ICT1222'),
+    -- ('2024-08-13', 'Present', 'Practical', 'TG-010', NULL, 'TO001', 'ICT1222'), suspended student
     ('2024-08-13', 'Present', 'Practical', 'TG-014', NULL, 'TO001', 'ICT1222'),
     ('2024-08-13', 'Present', 'Practical', 'TG-015', NULL, 'TO001', 'ICT1222'),
     ('2024-08-13', 'Present', 'Practical', 'TG-016', NULL, 'TO001', 'ICT1222'),
 
                             -- ET Department -- 
-    ('2024-08-13', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS4302'),
-    ('2024-08-13', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS4302'),
-    ('2024-08-13', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS4302'),
+    ('2024-08-13', 'Absent', 'Lecture', 'TG-005', 'MD004', 'TO001', 'TMS4302'),
+    -- ('2024-08-13', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS4302'), suspended student
+    -- ('2024-08-13', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS4302'), suspended student
     ('2024-08-13', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS4302'),
     ('2024-08-13', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS4302'),
 
@@ -322,17 +312,17 @@ VALUES
     ('2024-08-14', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1213'),
     ('2024-08-14', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1213'),
     ('2024-08-14', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1213'),
-    ('2024-08-14', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1213'),
+    -- ('2024-08-14', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1213'), suspended student
     ('2024-08-14', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1213'),
-    ('2024-08-14', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1213'),
-    ('2024-08-14', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1213'),
+    -- ('2024-08-14', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1213'), suspended student
+    ('2024-08-14', 'Absent', 'Lecture', 'TG-014', 'MD005', 'TO001', 'ICT1213'),
     ('2024-08-14', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1213'),
     ('2024-08-14', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1213'),
 
                             -- ET Department -- 
-    ('2024-08-14', 'Present', 'Practical', 'TG-005', NULL, 'TO001', 'TMS6301'),
-    ('2024-08-14', 'Present', 'Practical', 'TG-017', NULL, 'TO001', 'TMS6301'),
-    ('2024-08-14', 'Present', 'Practical', 'TG-018', NULL, 'TO001', 'TMS6301'),
+    ('2024-08-14', 'Absent', 'Lecture', 'TG-005', 'MD004', 'TO001', 'TMS6301'),
+    -- ('2024-08-14', 'Present', 'Practical', 'TG-017', NULL, 'TO001', 'TMS6301'), suspended student
+    -- ('2024-08-14', 'Present', 'Practical', 'TG-018', NULL, 'TO001', 'TMS6301'), suspended student
     ('2024-08-14', 'Present', 'Practical', 'TG-019', NULL, 'TO001', 'TMS6301'),
     ('2024-08-14', 'Present', 'Practical', 'TG-020', NULL, 'TO001', 'TMS6301'),
 
@@ -350,33 +340,33 @@ VALUES
     ('2024-08-15', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1242'),
     ('2024-08-15', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1242'),
     ('2024-08-15', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1242'),
-    ('2024-08-15', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1242'),
+    -- ('2024-08-15', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1242'), suspended student
     ('2024-08-15', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1242'),
-    ('2024-08-15', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1242'),
-    ('2024-08-15', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1242'),
+    -- ('2024-08-15', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1242'), suspended student
+    ('2024-08-15', 'Absent', 'Lecture', 'TG-014', 'MD005', 'TO001', 'ICT1242'),
     ('2024-08-15', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1242'),
     ('2024-08-15', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1242'),
     ('2024-08-15', 'Present', 'Lecture', 'TG-001', NULL, 'TO001', 'ICT1253'),
     ('2024-08-15', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1253'),
     ('2024-08-15', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1253'),
     ('2024-08-15', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1253'),
-    ('2024-08-15', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1253'),
+    -- ('2024-08-15', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1253'), suspended student
     ('2024-08-15', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1253'),
-    ('2024-08-15', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1253'),
+    -- ('2024-08-15', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1253'), suspended student
     ('2024-08-15', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1253'),
     ('2024-08-15', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1253'),
-    ('2024-08-15', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1253'),
+    ('2024-08-15', 'Absent', 'Lecture', 'TG-016', 'MD006', 'TO001', 'ICT1253'),
 
                             -- ET Department -- 
     ('2024-08-15', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS6302'),
-    ('2024-08-15', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS6302'),
-    ('2024-08-15', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS6302'),
+    -- ('2024-08-15', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS6302'), suspended student
+    -- ('2024-08-15', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS6302'), suspended student
     ('2024-08-15', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS6302'),
     ('2024-08-15', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS6302'),
                 -- Department of Multidisciplinary Studies --
     ('2024-08-15', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-15', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-15', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TCS1212'),
+    -- ('2024-08-15', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TCS1212'), suspended student
+    -- ('2024-08-15', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TCS1212'), suspended student
     ('2024-08-15', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TCS1212'),
     ('2024-08-15', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TCS1212'),
 
@@ -394,22 +384,22 @@ VALUES
     ('2024-08-16', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ENG1212'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ENG1212'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-16', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-16', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-16', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-16', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ENG1212'),
+    -- ('2024-08-16', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ENG1212'), suspended student
+    ('2024-08-16', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ENG1212'), 
+    -- ('2024-08-16', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ENG1212'), suspended student
+    ('2024-08-16', 'Absent', 'Lecture', 'TG-014', 'MD005', 'TO001', 'ENG1212'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-16', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ENG1212'),
+    ('2024-08-16', 'Absent', 'Lecture', 'TG-016', 'MD006', 'TO001', 'ENG1212'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-001', NULL, 'TO001', 'TCS1212'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'TCS1212'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'TCS1212'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-16', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'TCS1212'),
+    -- ('2024-08-16', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'TCS1212'), suspended student
     ('2024-08-16', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-16', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'TCS1212'),
+    -- ('2024-08-16', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'TCS1212'), suspended student
     ('2024-08-16', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'TCS1212'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-16', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'TCS1212'),
+    ('2024-08-16', 'Absent', 'Lecture', 'TG-016', 'MD006', 'TO001', 'TCS1212'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-006', NULL, 'TO001', 'TCS1212'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-007', NULL, 'TO001', 'TCS1212'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-011', NULL, 'TO001', 'TCS1212'),
@@ -418,8 +408,8 @@ VALUES
 
                             -- ET Department -- 
     ('2024-08-16', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS7302'),
-    ('2024-08-16', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS7302'),
-    ('2024-08-16', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS7302'),
+    -- ('2024-08-16', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS7302'), suspended student
+    -- ('2024-08-16', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS7302'), suspended student
     ('2024-08-16', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS7302'),
     ('2024-08-16', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS7302'),
 
@@ -433,34 +423,34 @@ VALUES
     ('2024-08-20', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1212'),
     ('2024-08-20', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1212'),
     ('2024-08-20', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1212'),
-    ('2024-08-20', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1212'),
+    -- ('2024-08-20', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1212'), suspended student
     ('2024-08-20', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1212'),
-    ('2024-08-20', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1212'),
+    -- ('2024-08-20', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1212'), suspended student
     ('2024-08-20', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1212'),
     ('2024-08-20', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1212'),
-    ('2024-08-20', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1212'),
+    ('2024-08-20', 'Absent', 'Lecture', 'TG-016', 'MD006', 'TO001', 'ICT1212'),
     ('2024-08-20', 'Present', 'Practical', 'TG-001', NULL, 'TO001', 'ICT1222'),
     ('2024-08-20', 'Present', 'Practical', 'TG-002', NULL, 'TO001', 'ICT1222'),
     ('2024-08-20', 'Present', 'Practical', 'TG-003', NULL, 'TO001', 'ICT1222'),
     ('2024-08-20', 'Present', 'Practical', 'TG-004', NULL, 'TO001', 'ICT1222'),
-    ('2024-08-20', 'Present', 'Practical', 'TG-008', NULL, 'TO001', 'ICT1222'),
+    -- ('2024-08-20', 'Present', 'Practical', 'TG-008', NULL, 'TO001', 'ICT1222'), suspended student
     ('2024-08-20', 'Present', 'Practical', 'TG-009', NULL, 'TO001', 'ICT1222'),
-    ('2024-08-20', 'Present', 'Practical', 'TG-010', NULL, 'TO001', 'ICT1222'),
+    -- ('2024-08-20', 'Present', 'Practical', 'TG-010', NULL, 'TO001', 'ICT1222'), suspended student
     ('2024-08-20', 'Present', 'Practical', 'TG-014', NULL, 'TO001', 'ICT1222'),
     ('2024-08-20', 'Present', 'Practical', 'TG-015', NULL, 'TO001', 'ICT1222'),
-    ('2024-08-20', 'Present', 'Practical', 'TG-016', NULL, 'TO001', 'ICT1222'),
+    ('2024-08-20', 'Absent', 'Lecture', 'TG-016', 'MD006', 'TO001', 'ICT1222'),
 
                             -- ET Department -- 
     ('2024-08-20', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS4302'),
-    ('2024-08-20', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS4302'),
-    ('2024-08-20', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS4302'),
+    -- ('2024-08-20', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS4302'), suspended student
+    -- ('2024-08-20', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS4302'), suspended student
     ('2024-08-20', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS4302'),
     ('2024-08-20', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS4302'),
 
                             -- BST Department --
     ('2024-08-20', 'Present', 'Lecture', 'TG-006', NULL, 'TO001', 'BST3021'),
     ('2024-08-20', 'Present', 'Lecture', 'TG-007', NULL, 'TO001', 'BST3021'),
-    ('2024-08-20', 'Present', 'Lecture', 'TG-011', NULL, 'TO001', 'BST3021'),
+    ('2024-08-20', 'Absent', 'Lecture', 'TG-011', 'MD007', 'TO001', 'BST3021'),
     ('2024-08-20', 'Present', 'Lecture', 'TG-012', NULL, 'TO001', 'BST3021'),
     ('2024-08-20', 'Present', 'Lecture', 'TG-013', NULL, 'TO001', 'BST3021'),
 
@@ -471,24 +461,24 @@ VALUES
     ('2024-08-21', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1213'),
     ('2024-08-21', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1213'),
     ('2024-08-21', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1213'),
-    ('2024-08-21', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1213'),
+    -- ('2024-08-21', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1213'), suspended student
     ('2024-08-21', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1213'),
-    ('2024-08-21', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1213'),
+    -- ('2024-08-21', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1213'), suspended student
     ('2024-08-21', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1213'),
     ('2024-08-21', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1213'),
-    ('2024-08-21', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1213'),
+    ('2024-08-21', 'Absent', 'Lecture', 'TG-016', 'MD006', 'TO001', 'ICT1213'),
 
                             -- ET Department -- 
     ('2024-08-21', 'Present', 'Practical', 'TG-005', NULL, 'TO001', 'TMS6301'),
-    ('2024-08-21', 'Present', 'Practical', 'TG-017', NULL, 'TO001', 'TMS6301'),
-    ('2024-08-21', 'Present', 'Practical', 'TG-018', NULL, 'TO001', 'TMS6301'),
+    -- ('2024-08-21', 'Present', 'Practical', 'TG-017', NULL, 'TO001', 'TMS6301'), suspended student
+    -- ('2024-08-21', 'Present', 'Practical', 'TG-018', NULL, 'TO001', 'TMS6301'), suspended student
     ('2024-08-21', 'Present', 'Practical', 'TG-019', NULL, 'TO001', 'TMS6301'),
     ('2024-08-21', 'Present', 'Practical', 'TG-020', NULL, 'TO001', 'TMS6301'),
 
                             -- BST Department --
     ('2024-08-21', 'Present', 'Lecture', 'TG-006', NULL, 'TO001', 'BST2343'),
     ('2024-08-21', 'Present', 'Lecture', 'TG-007', NULL, 'TO001', 'BST2343'),
-    ('2024-08-21', 'Present', 'Lecture', 'TG-011', NULL, 'TO001', 'BST2343'),
+    ('2024-08-21', 'Absent', 'Lecture', 'TG-011', 'MD007', 'TO001', 'BST2343'),
     ('2024-08-21', 'Present', 'Lecture', 'TG-012', NULL, 'TO001', 'BST2343'),
     ('2024-08-21', 'Present', 'Lecture', 'TG-013', NULL, 'TO001', 'BST2343'),
 
@@ -499,9 +489,9 @@ VALUES
     ('2024-08-22', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1242'),
     ('2024-08-22', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1242'),
     ('2024-08-22', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1242'),
-    ('2024-08-22', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1242'),
+    -- ('2024-08-22', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1242'), suspended student
     ('2024-08-22', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1242'),
-    ('2024-08-22', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1242'),
+    -- ('2024-08-22', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1242'), suspended student
     ('2024-08-22', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1242'),
     ('2024-08-22', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1242'),
     ('2024-08-22', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1242'),
@@ -509,30 +499,30 @@ VALUES
     ('2024-08-22', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1253'),
     ('2024-08-22', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1253'),
     ('2024-08-22', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1253'),
-    ('2024-08-22', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1253'),
+    -- ('2024-08-22', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1253'), suspended student
     ('2024-08-22', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1253'),
-    ('2024-08-22', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1253'),
+    -- ('2024-08-22', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1253'), suspended student
     ('2024-08-22', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1253'),
     ('2024-08-22', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1253'),
-    ('2024-08-22', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1253'),
+    ('2024-08-22', 'Absent', 'Lecture', 'TG-016', 'MD006', 'TO001', 'ICT1253'),
 
                             -- ET Department -- 
     ('2024-08-22', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS6302'),
-    ('2024-08-22', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS6302'),
-    ('2024-08-22', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS6302'),
-    ('2024-08-22', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS6302'),
+    -- ('2024-08-22', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS6302'), suspended student
+    -- ('2024-08-22', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS6302'), suspended student
+    ('2024-08-22', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS6302'), 
     ('2024-08-22', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS6302'),
                 -- Department of Multidisciplinary Studies --
     ('2024-08-22', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-22', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-22', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TCS1212'),
+    -- ('2024-08-22', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TCS1212'), suspended student
+    -- ('2024-08-22', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TCS1212'), suspended student
     ('2024-08-22', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TCS1212'),
     ('2024-08-22', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TCS1212'),
 
                             -- BST Department --
     ('2024-08-22', 'Present', 'Lecture', 'TG-006', NULL, 'TO001', 'BST2331'),
     ('2024-08-22', 'Present', 'Lecture', 'TG-007', NULL, 'TO001', 'BST2331'),
-    ('2024-08-22', 'Present', 'Lecture', 'TG-011', NULL, 'TO001', 'BST2331'),
+    ('2024-08-22', 'Absent', 'Lecture', 'TG-011', 'MD007', 'TO001', 'BST2331'),
     ('2024-08-22', 'Present', 'Lecture', 'TG-012', NULL, 'TO001', 'BST2331'),
     ('2024-08-22', 'Present', 'Lecture', 'TG-013', NULL, 'TO001', 'BST2331'),
 
@@ -543,9 +533,9 @@ VALUES
     ('2024-08-23', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ENG1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ENG1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-23', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ENG1212'),
+    -- ('2024-08-23', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ENG1212'), suspended student
     ('2024-08-23', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-23', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ENG1212'),
+    -- ('2024-08-23', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ENG1212'), suspended student
     ('2024-08-23', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ENG1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ENG1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ENG1212'),
@@ -553,22 +543,22 @@ VALUES
     ('2024-08-23', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'TCS1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'TCS1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-23', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'TCS1212'),
+    -- ('2024-08-23', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'TCS1212'), suspended student
     ('2024-08-23', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-23', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'TCS1212'),
+    -- ('2024-08-23', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'TCS1212'), suspended student
     ('2024-08-23', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'TCS1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'TCS1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'TCS1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-006', NULL, 'TO001', 'TCS1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-007', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-23', 'Present', 'Lecture', 'TG-011', NULL, 'TO001', 'TCS1212'),
+    ('2024-08-23', 'Absent', 'Lecture', 'TG-011', 'MD007', 'TO001', 'TCS1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-012', NULL, 'TO001', 'TCS1212'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-013', NULL, 'TO001', 'TCS1212'),
 
                             -- ET Department -- 
     ('2024-08-23', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS7302'),
-    ('2024-08-23', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS7302'),
-    ('2024-08-23', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS7302'),
+    -- ('2024-08-23', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS7302'), suspended student
+    -- ('2024-08-23', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS7302'), suspended student
     ('2024-08-23', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS7302'),
     ('2024-08-23', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS7302'),
 
@@ -582,24 +572,24 @@ VALUES
     ('2024-08-26', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1233'),
     ('2024-08-26', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1233'),
     ('2024-08-26', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1233'),
-    ('2024-08-26', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1233'),
+    -- ('2024-08-26', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1233'), suspended student
     ('2024-08-26', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1233'),
-    ('2024-08-26', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1233'),
+    -- ('2024-08-26', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1233'), suspended student
     ('2024-08-26', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1233'),
     ('2024-08-26', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1233'),
     ('2024-08-26', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1233'),
 
                             -- ET Department -- 
     ('2024-08-26', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS2022'),
-    ('2024-08-26', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS2022'),
-    ('2024-08-26', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS2022'),
+    -- ('2024-08-26', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS2022'), suspended student
+    -- ('2024-08-26', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS2022'), suspended student
     ('2024-08-26', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS2022'),
     ('2024-08-26', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS2022'),
 
                             -- BST Department --
     ('2024-08-26', 'Present', 'Lecture', 'TG-006', NULL, 'TO001', 'BST4024'),
     ('2024-08-26', 'Present', 'Lecture', 'TG-007', NULL, 'TO001', 'BST4024'),
-    ('2024-08-26', 'Present', 'Lecture', 'TG-011', NULL, 'TO001', 'BST4024'),
+    ('2024-08-26', 'Absent', 'Lecture', 'TG-011', 'MD007', 'TO001', 'BST4024'),
     ('2024-08-26', 'Present', 'Lecture', 'TG-012', NULL, 'TO001', 'BST4024'),
     ('2024-08-26', 'Present', 'Lecture', 'TG-013', NULL, 'TO001', 'BST4024'),
 
@@ -610,9 +600,9 @@ VALUES
     ('2024-08-27', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1212'),
     ('2024-08-27', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1212'),
     ('2024-08-27', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1212'),
-    ('2024-08-27', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1212'),
+    -- ('2024-08-27', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1212'), suspended student
     ('2024-08-27', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1212'),
-    ('2024-08-27', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1212'),
+    -- ('2024-08-27', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1212'), suspended student
     ('2024-08-27', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1212'),
     ('2024-08-27', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1212'),
     ('2024-08-27', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1212'),
@@ -620,24 +610,24 @@ VALUES
     ('2024-08-27', 'Present', 'Practical', 'TG-002', NULL, 'TO001', 'ICT1222'),
     ('2024-08-27', 'Present', 'Practical', 'TG-003', NULL, 'TO001', 'ICT1222'),
     ('2024-08-27', 'Present', 'Practical', 'TG-004', NULL, 'TO001', 'ICT1222'),
-    ('2024-08-27', 'Present', 'Practical', 'TG-008', NULL, 'TO001', 'ICT1222'),
+    -- ('2024-08-27', 'Present', 'Practical', 'TG-008', NULL, 'TO001', 'ICT1222'), suspended student
     ('2024-08-27', 'Present', 'Practical', 'TG-009', NULL, 'TO001', 'ICT1222'),
-    ('2024-08-27', 'Present', 'Practical', 'TG-010', NULL, 'TO001', 'ICT1222'),
-    ('2024-08-27', 'Present', 'Practical', 'TG-014', NULL, 'TO001', 'ICT1222'),
+    -- ('2024-08-27', 'Present', 'Practical', 'TG-010', NULL, 'TO001', 'ICT1222'), suspended student
+    ('2024-08-27', 'Present', 'Practical', 'TG-014', NULL, 'TO001', 'ICT1222'), 
     ('2024-08-27', 'Present', 'Practical', 'TG-015', NULL, 'TO001', 'ICT1222'),
     ('2024-08-27', 'Present', 'Practical', 'TG-016', NULL, 'TO001', 'ICT1222'),
 
                             -- ET Department -- 
     ('2024-08-27', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS4302'),
-    ('2024-08-27', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS4302'),
-    ('2024-08-27', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS4302'),
-    ('2024-08-27', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS4302'),
+    -- ('2024-08-27', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS4302'), suspended student
+    -- ('2024-08-27', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS4302'), suspended student
+    ('2024-08-27', 'Absent', 'Lecture', 'TG-019', 'MD008', 'TO001', 'TMS4302'),
     ('2024-08-27', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS4302'),
 
                             -- BST Department --
     ('2024-08-27', 'Present', 'Lecture', 'TG-006', NULL, 'TO001', 'BST3021'),
     ('2024-08-27', 'Present', 'Lecture', 'TG-007', NULL, 'TO001', 'BST3021'),
-    ('2024-08-27', 'Present', 'Lecture', 'TG-011', NULL, 'TO001', 'BST3021'),
+    ('2024-08-27', 'Absent', 'Lecture', 'TG-011', 'MD007', 'TO001', 'BST3021'),
     ('2024-08-27', 'Present', 'Lecture', 'TG-012', NULL, 'TO001', 'BST3021'),
     ('2024-08-27', 'Present', 'Lecture', 'TG-013', NULL, 'TO001', 'BST3021'),
 
@@ -648,17 +638,17 @@ VALUES
     ('2024-08-28', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1213'),
     ('2024-08-28', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1213'),
     ('2024-08-28', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1213'),
-    ('2024-08-28', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1213'),
+    -- ('2024-08-28', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1213'), suspended student
     ('2024-08-28', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1213'),
-    ('2024-08-28', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1213'),
-    ('2024-08-28', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1213'),
+    -- ('2024-08-28', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1213'), suspended student
+    ('2024-08-28', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1213'), 
     ('2024-08-28', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1213'),
     ('2024-08-28', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1213'),
 
                             -- ET Department -- 
     ('2024-08-28', 'Present', 'Practical', 'TG-005', NULL, 'TO001', 'TMS6301'),
-    ('2024-08-28', 'Present', 'Practical', 'TG-017', NULL, 'TO001', 'TMS6301'),
-    ('2024-08-28', 'Present', 'Practical', 'TG-018', NULL, 'TO001', 'TMS6301'),
+    -- ('2024-08-28', 'Present', 'Practical', 'TG-017', NULL, 'TO001', 'TMS6301'), suspended student
+    -- ('2024-08-28', 'Present', 'Practical', 'TG-018', NULL, 'TO001', 'TMS6301'), suspended student
     ('2024-08-28', 'Present', 'Practical', 'TG-019', NULL, 'TO001', 'TMS6301'),
     ('2024-08-28', 'Present', 'Practical', 'TG-020', NULL, 'TO001', 'TMS6301'),
 
@@ -673,36 +663,36 @@ VALUES
 
                             -- ICT Department --
     ('2024-08-29', 'Present', 'Lecture', 'TG-001', NULL, 'TO001', 'ICT1242'),
-    ('2024-08-29', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1242'),
+    ('2024-08-29', 'Absent', 'Lecture', 'TG-002', 'MD008', 'TO001', 'ICT1242'),
     ('2024-08-29', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1242'),
     ('2024-08-29', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1242'),
-    ('2024-08-29', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1242'),
+    -- ('2024-08-29', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1242'), suspended student
     ('2024-08-29', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1242'),
-    ('2024-08-29', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1242'),
+    -- ('2024-08-29', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1242'), suspended student
     ('2024-08-29', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1242'),
     ('2024-08-29', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1242'),
     ('2024-08-29', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1242'),
     ('2024-08-29', 'Present', 'Lecture', 'TG-001', NULL, 'TO001', 'ICT1253'),
-    ('2024-08-29', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ICT1253'),
+    ('2024-08-29', 'Absent', 'Lecture', 'TG-002', 'MD008', 'TO001', 'ICT1253'),
     ('2024-08-29', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ICT1253'),
     ('2024-08-29', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ICT1253'),
-    ('2024-08-29', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1253'),
+    -- ('2024-08-29', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ICT1253'), suspended student
     ('2024-08-29', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ICT1253'),
-    ('2024-08-29', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1253'),
+    -- ('2024-08-29', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ICT1253'), suspended student
     ('2024-08-29', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ICT1253'),
     ('2024-08-29', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1253'),
     ('2024-08-29', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1253'),
 
                             -- ET Department -- 
     ('2024-08-29', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS6302'),
-    ('2024-08-29', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS6302'),
-    ('2024-08-29', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS6302'),
-    ('2024-08-29', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS6302'),
+    -- ('2024-08-29', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS6302'), suspended student
+    -- ('2024-08-29', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS6302'), suspended student
+    ('2024-08-29', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS6302'), 
     ('2024-08-29', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS6302'),
                 -- Department of Multidisciplinary Studies --
     ('2024-08-29', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-29', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-29', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TCS1212'),
+    -- ('2024-08-29', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TCS1212'), suspended student
+    -- ('2024-08-29', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TCS1212'), suspended student
     ('2024-08-29', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TCS1212'),
     ('2024-08-29', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TCS1212'),
 
@@ -717,36 +707,36 @@ VALUES
 
                 -- Department of Multidisciplinary Studies --
     ('2024-08-30', 'Present', 'Lecture', 'TG-001', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-30', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'ENG1212'),
+    ('2024-08-30', 'Absent', 'Lecture', 'TG-002', 'MD008', 'TO001', 'ENG1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'ENG1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-30', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ENG1212'),
+    -- ('2024-08-30', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'ENG1212'), suspended student
     ('2024-08-30', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'ENG1212'),
-    ('2024-08-30', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ENG1212'),
+    -- ('2024-08-30', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'ENG1212'), suspended student
     ('2024-08-30', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'ENG1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ENG1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ENG1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-001', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-30', 'Present', 'Lecture', 'TG-002', NULL, 'TO001', 'TCS1212'),
+    ('2024-08-30', 'Absent', 'Lecture', 'TG-002', 'MD008', 'TO001', 'TCS1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-003', NULL, 'TO001', 'TCS1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-004', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-30', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-30', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-30', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'TCS1212'),
+    -- ('2024-08-30', 'Present', 'Lecture', 'TG-008', NULL, 'TO001', 'TCS1212'), suspended student
+    ('2024-08-30', 'Present', 'Lecture', 'TG-009', NULL, 'TO001', 'TCS1212'), 
+    -- ('2024-08-30', 'Present', 'Lecture', 'TG-010', NULL, 'TO001', 'TCS1212'), suspended student
     ('2024-08-30', 'Present', 'Lecture', 'TG-014', NULL, 'TO001', 'TCS1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'TCS1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'TCS1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-006', NULL, 'TO001', 'TCS1212'),
-    ('2024-08-30', 'Present', 'Lecture', 'TG-007', NULL, 'TO001', 'TCS1212'),
+    ('2024-08-30', 'Absent', 'Lecture', 'TG-007', 'MD009', 'TO001', 'TCS1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-011', NULL, 'TO001', 'TCS1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-012', NULL, 'TO001', 'TCS1212'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-013', NULL, 'TO001', 'TCS1212'),
 
                             -- ET Department -- 
     ('2024-08-30', 'Present', 'Lecture', 'TG-005', NULL, 'TO001', 'TMS7302'),
-    ('2024-08-30', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS7302'),
-    ('2024-08-30', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS7302'),
-    ('2024-08-30', 'Present', 'Lecture', 'TG-019', NULL, 'TO001', 'TMS7302'),
+    -- ('2024-08-30', 'Present', 'Lecture', 'TG-017', NULL, 'TO001', 'TMS7302'), suspended student
+    -- ('2024-08-30', 'Present', 'Lecture', 'TG-018', NULL, 'TO001', 'TMS7302'), suspended student
+    ('2024-08-30', 'Absent', 'Lecture', 'TG-019', 'MD010', 'TO001', 'TMS7302'),
     ('2024-08-30', 'Present', 'Lecture', 'TG-020', NULL, 'TO001', 'TMS7302');
     
 
