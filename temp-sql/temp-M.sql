@@ -1,3 +1,4 @@
+
 -- create table user--
 
 CREATE TABLE User
@@ -28,7 +29,7 @@ CREATE TABLE Dean
 CREATE TABLE Department
 (
      dep_id CHAR(4) PRIMARY KEY,
-     dep_name VARCHAR(15),
+     dep_name VARCHAR(50),
      dean_id CHAR(5),
      admin_id VARCHAR(10)
      
@@ -36,7 +37,7 @@ CREATE TABLE Department
 -- create table user-contact--
 
 
-CREATE TABLE User-contact
+CREATE TABLE User_contact
 (
      nic CHAR(12) PRIMARY KEY,
      contact_no CHAR(10)
