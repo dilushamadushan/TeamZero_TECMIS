@@ -86,3 +86,7 @@ INSERT INTO User VALUES
 ('159753486X', 'Jack', 'Fernando', '767 Kegalle 18', 'jack@my.lk', 'Male', '1989-12-25'),
 
 ('2345678902V', 'Kira', 'Muthumala', '878 Galle 19', 'kira@my.lk', 'Female', '1991-01-02'); /*dean*/
+
+
+INSERT INTO Dean VALUES
+("DE1","2345678902V");
