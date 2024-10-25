@@ -142,3 +142,44 @@ GRANT SELECT ON teamZero.attendence TO 'student'@'localhost';
 FLUSH PRIVILEGES;
 GRANT SELECT ON teamZero.mark TO 'student'@'localhost';
 FLUSH PRIVILEGES;
+
+-- Adding Foriegn keys --
+
+ALTER TABLE Dean ADD FOREIGN KEY (nic) REFERENCES User(nic);
+ALTER TABLE Student ADD FOREIGN KEY (nic) REFERENCES User(nic);
+ALTER TABLE Lecture ADD FOREIGN KEY (nic) REFERENCES User(nic);
+ALTER TABLE Admin ADD FOREIGN KEY (nic) REFERENCES User(nic);
+ALTER TABLE Technical_officer ADD FOREIGN KEY (nic) REFERENCES User(nic);
+ALTER TABLE User_contact ADD FOREIGN KEY (nic) REFERENCES User(nic);
+
+ALTER TABLE Lecture_student ADD FOREIGN KEY (student_id) REFERENCES Student(student_id);
+ALTER TABLE Attendence ADD FOREIGN KEY (student_id) REFERENCES Student(student_id);
+ALTER TABLE Student_Course ADD FOREIGN KEY (student_id) REFERENCES Student(student_id);
+ALTER TABLE Mark ADD FOREIGN KEY (student_id) REFERENCES Student(student_id);
+ALTER TABLE Medical ADD FOREIGN KEY (student_id) REFERENCES Student(student_id);
+
+ALTER TABLE Notice ADD FOREIGN KEY (lecture_id) REFERENCES  Lecture(lecture_id);
+ALTER TABLE Lecture_student ADD FOREIGN KEY (lecture_id) REFERENCES Lecture(lecture_id);
+ALTER TABLE Lecture_Course ADD FOREIGN KEY (lecture_id) REFERENCES Lecture(lecture_id);
+
+ALTER TABLE Department ADD FOREIGN KEY (dean_id) REFERENCES Dean(dean_id);
+
+ALTER TABLE Medical ADD FOREIGN KEY (tech_officer_iD) REFERENCES Technical_officer(tech_officer_id);
+ALTER TABLE Attendence ADD FOREIGN KEY (tech_officer_id) REFERENCES Technical_officer(tech_officer_id);
+
+ALTER TABLE Department ADD FOREIGN KEY (admin_id) REFERENCES Admin(admin_id);
+
+ALTER TABLE Student_notice ADD FOREIGN KEY (notice_id) REFERENCES Notice(notice_id);
+
+ALTER TABLE Attendence ADD FOREIGN KEY (medical_id) REFERENCES Medical(medical_id);
+
+ALTER TABLE Lecture ADD FOREIGN KEY (dep_id) REFERENCES Department(dep_id);
+ALTER TABLE Student ADD FOREIGN KEY (dep_id) REFERENCES Department(dep_id);
+ALTER TABLE Course ADD FOREIGN KEY (dep_id) REFERENCES Department(dep_id);
+
+ALTER TABLE Lecture_Course ADD FOREIGN KEY (course_code) REFERENCES Course(course_code);
+ALTER TABLE Student_Course ADD FOREIGN KEY (course_code) REFERENCES Course(course_code);
+ALTER TABLE Mark ADD FOREIGN KEY (course_code) REFERENCES Course(course_code);
+ALTER TABLE Attendence ADD FOREIGN KEY (course_code) REFERENCES Course(course_code);
+
+ALTER TABLE Student_notice ADD FOREIGN KEY (student_id) REFERENCES Student(student_id);
