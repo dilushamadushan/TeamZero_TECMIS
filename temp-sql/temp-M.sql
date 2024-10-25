@@ -90,3 +90,9 @@ INSERT INTO User VALUES
 
 INSERT INTO Dean VALUES
 ("DE1","2345678902V");
+
+INSERT INTO Department VALUES
+("D001"," Department of Information & Communication Technology","DE1","A1"),
+("D002"," Department of Engineering Technology","DE1","A1"),
+("D003","Department of Biosystems Technology","DE1","A1"),
+("D004","Department of Multidisciplinary Studies","DE1","A1");
