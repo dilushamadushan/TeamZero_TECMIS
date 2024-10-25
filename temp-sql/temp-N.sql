@@ -892,10 +892,6 @@ VALUES
 
 -- insert data  to Student_notice --
 
--- CREATE TABLE (
---     student_id VARCHAR(6),
---     notice_id VARCHAR(6)
--- );
 INSERT INTO Student_notice
 VALUES
     ('TG-001','N001'), 
