@@ -741,20 +741,6 @@ VALUES
     
 -- INSERT VALUE --
 
--- insert data  to Notice --
-
-INSERT INTO Notice
-VALUES
-    ('N001','Faculty meeting on August 15th at 3:00 PM.','2024-08-10','LC01'),
-    ('N002','Class Cancellation on August 19th due to holiday','2024-08-15','LC05'),
-    ('N003','Library closure on September 20th for maintenance','2024-08-16','LC05'),
-    ('N004','Upcoming Midterm Exam Schedule', '2024-10-12','LC09'),                
-    ('N005','Guest Lecture on November 2st in the auditorium','2024-10-29','LC02'),
-    ('N006','Final exam schedule for the current semester','2024-11-11','LC03'),
-    ('N007','Graduation ceremony details for this year','2024-11-1','LC01');
-
--- INSERT VALUE --
-
 -- insert data  to Lecture_student --
 
 
@@ -886,7 +872,188 @@ VALUES
 
     ('TG-020','LC06'),
     ('TG-020','LC08'),
-    ('TG-020','LC09'),
+    ('TG-020','LC09');
 
+-- INSERT VALUE --
 
+-- insert data  to Notice --
 
+INSERT INTO Notice
+VALUES
+    ('N001','Faculty meeting on August 15th at 3:00 PM.','2024-08-10','LC01'),
+    ('N002','Class Cancellation on August 19th due to holiday','2024-08-15','LC05'),
+    ('N003','Library closure on September 20th for maintenance','2024-08-16','LC05'),
+    ('N004','Upcoming Midterm Exam Schedule', '2024-10-12','LC09'),                
+    ('N005','Guest Lecture on November 2st in the auditorium','2024-10-29','LC02'),
+    ('N006','Final exam schedule for the current semester','2024-11-11','LC03'),
+    ('N007','Graduation ceremony details for this year','2024-11-1','LC01');
+
+-- INSERT VALUE --
+
+-- insert data  to Student_notice --
+
+-- CREATE TABLE (
+--     student_id VARCHAR(6),
+--     notice_id VARCHAR(6)
+-- );
+INSERT INTO Student_notice
+VALUES
+    ('TG-001','N001'), 
+    ('TG-001','N002'), 
+    ('TG-001','N003'), 
+    ('TG-001','N004'), 
+    ('TG-001','N005'), 
+    ('TG-001','N006'), 
+    ('TG-001','N007'), 
+
+    ('TG-002','N001'), 
+    ('TG-002','N002'), 
+    ('TG-002','N003'), 
+    ('TG-002','N004'), 
+    ('TG-002','N005'), 
+    ('TG-002','N006'), 
+    ('TG-002','N007'),
+
+    ('TG-003','N001'), 
+    ('TG-003','N002'), 
+    ('TG-003','N003'), 
+    ('TG-003','N004'), 
+    ('TG-003','N005'), 
+    ('TG-003','N006'), 
+    ('TG-003','N007'),
+
+    ('TG-004','N001'), 
+    ('TG-004','N002'), 
+    ('TG-004','N003'), 
+    ('TG-004','N004'), 
+    ('TG-004','N005'), 
+    ('TG-004','N006'), 
+    ('TG-004','N007'),
+
+    ('TG-005','N001'), 
+    ('TG-005','N002'), 
+    ('TG-005','N003'), 
+    ('TG-005','N004'), 
+    ('TG-005','N005'), 
+    ('TG-005','N006'), 
+    ('TG-005','N007'),
+
+    ('TG-006','N001'), 
+    ('TG-006','N002'), 
+    ('TG-006','N003'), 
+    ('TG-006','N004'), 
+    ('TG-006','N005'), 
+    ('TG-006','N006'), 
+    ('TG-006','N007'),
+
+    ('TG-007','N001'), 
+    ('TG-007','N002'), 
+    ('TG-007','N003'), 
+    ('TG-007','N004'), 
+    ('TG-007','N005'), 
+    ('TG-007','N006'), 
+    ('TG-007','N007'),
+
+    ('TG-008','N001'), 
+    ('TG-008','N002'), 
+    ('TG-008','N003'), 
+    ('TG-008','N004'), 
+    ('TG-008','N005'), 
+    ('TG-008','N006'), 
+    ('TG-008','N007'),
+
+    ('TG-009','N001'), 
+    ('TG-009','N002'), 
+    ('TG-009','N003'), 
+    ('TG-009','N004'), 
+    ('TG-009','N005'), 
+    ('TG-009','N006'), 
+    ('TG-009','N007'),
+
+    ('TG-010','N001'), 
+    ('TG-010','N002'), 
+    ('TG-010','N003'), 
+    ('TG-010','N004'), 
+    ('TG-010','N005'), 
+    ('TG-010','N006'), 
+    ('TG-010','N007'),
+
+    ('TG-011','N001'), 
+    ('TG-011','N002'), 
+    ('TG-011','N003'), 
+    ('TG-011','N004'), 
+    ('TG-011','N005'), 
+    ('TG-011','N006'), 
+    ('TG-011','N007'),
+
+    ('TG-012','N001'), 
+    ('TG-012','N002'), 
+    ('TG-012','N003'), 
+    ('TG-012','N004'), 
+    ('TG-012','N005'), 
+    ('TG-012','N006'), 
+    ('TG-012','N007'),
+
+    ('TG-013','N001'), 
+    ('TG-013','N002'), 
+    ('TG-013','N003'), 
+    ('TG-013','N004'), 
+    ('TG-013','N005'), 
+    ('TG-013','N006'), 
+    ('TG-013','N007'),
+
+    ('TG-014','N001'), 
+    ('TG-014','N002'), 
+    ('TG-014','N003'), 
+    ('TG-014','N004'), 
+    ('TG-014','N005'), 
+    ('TG-014','N006'), 
+    ('TG-014','N007'),
+
+    ('TG-015','N001'), 
+    ('TG-015','N002'), 
+    ('TG-015','N003'), 
+    ('TG-015','N004'), 
+    ('TG-015','N005'), 
+    ('TG-015','N006'), 
+    ('TG-015','N007'),
+
+    ('TG-016','N001'), 
+    ('TG-016','N002'), 
+    ('TG-016','N003'), 
+    ('TG-016','N004'), 
+    ('TG-016','N005'), 
+    ('TG-016','N006'), 
+    ('TG-016','N007'),
+
+    ('TG-017','N001'), 
+    ('TG-017','N002'), 
+    ('TG-017','N003'), 
+    ('TG-017','N004'), 
+    ('TG-017','N005'), 
+    ('TG-017','N006'), 
+    ('TG-017','N007'),
+
+    ('TG-018','N001'), 
+    ('TG-018','N002'), 
+    ('TG-018','N003'), 
+    ('TG-018','N004'), 
+    ('TG-018','N005'), 
+    ('TG-018','N006'), 
+    ('TG-018','N007'),
+
+    ('TG-019','N001'), 
+    ('TG-019','N002'), 
+    ('TG-019','N003'), 
+    ('TG-019','N004'), 
+    ('TG-019','N005'), 
+    ('TG-019','N006'), 
+    ('TG-019','N007'),
+
+    ('TG-020','N001'), 
+    ('TG-020','N002'), 
+    ('TG-020','N003'), 
+    ('TG-020','N004'), 
+    ('TG-020','N005'), 
+    ('TG-020','N006'), 
+    ('TG-020','N007');
