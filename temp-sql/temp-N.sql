@@ -5,7 +5,7 @@
 CREATE TABLE Technical_officer(
     tech_officer_id VARCHAR(6) PRIMARY KEY,
     nic CHAR(12),
-    role VARCHAR(20),
+    role VARCHAR(30),
 );
 
 -- create table Attendence--
@@ -31,7 +31,7 @@ CREATE TABLE Lecture_student(
 
 CREATE TABLE Notice(
     notice_id VARCHAR(6),
-    description VARCHAR(30),
+    description VARCHAR(300),
     date DATE,
     lecture_id VARCHAR(5)
 );
