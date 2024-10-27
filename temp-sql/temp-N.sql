@@ -1,14 +1,15 @@
-
-
 -- create table admin--
+-- create table Attendence--
+-- create table Lecture_student--
+-- create table notice--
+-- create table Student_notice--
+
 
 CREATE TABLE Technical_officer(
     tech_officer_id VARCHAR(6) PRIMARY KEY,
     nic CHAR(12),
     role VARCHAR(30)
 );
-
--- create table Attendence--
 
 CREATE TABLE Attendence(
     date DATE,
@@ -20,14 +21,10 @@ CREATE TABLE Attendence(
     course_code CHAR(8)
 );
 
--- create table Lecture_student--
-
 CREATE TABLE Lecture_student(
     lecture_id VARCHAR(5),
     student_id VARCHAR(6)
 );
-
--- create table notice--
 
 CREATE TABLE Notice(
     notice_id VARCHAR(6) PRIMARY KEY,
@@ -36,17 +33,25 @@ CREATE TABLE Notice(
     lecture_id VARCHAR(5)
 );
 
--- create table Student_notice--
+
 
 CREATE TABLE Student_notice(
     student_id VARCHAR(6),
     notice_id VARCHAR(6)
 );
 
-
--- INSERT VALUE --
+        -- INSERT VALUE --
 
 -- insert data  to Technical_officer --
+-- insert data  to Attendence --
+    -- * TG-008 suspended student 
+    -- * TG-010 suspended student
+    -- * TG-017 suspended student
+    -- * TG-018 suspended student
+-- insert data  to Lecture_student --
+-- insert data  to Notice --
+-- insert data  to Student_notice --
+
 
 INSERT INTO Technical_officer
 VALUES
@@ -55,10 +60,6 @@ VALUES
    ('TO003', '456123789V', 'Technical Support'),
    ('TO004', '789321456V', 'System Administrator'),
    ('TO005', '159753486X', 'Security Analyst');
-
--- INSERT VALUE --
-
--- insert data  to Attendence --
 
 INSERT INTO Attendence
 VALUES
@@ -1305,16 +1306,6 @@ VALUES
     ('2024-12-09', 'Present', 'Lecture', 'TG-015', NULL, 'TO001', 'ICT1233'),
     ('2024-12-09', 'Present', 'Lecture', 'TG-016', NULL, 'TO001', 'ICT1233');
 
--- TG-008 suspended student 
--- TG-010 suspended student
--- TG-017 suspended student
--- TG-018 suspended student
-    
--- INSERT VALUE --
-
--- insert data  to Lecture_student --
-
-
 INSERT INTO Lecture_student
 VALUES
     ('LC01','TG-001'), 
@@ -1437,10 +1428,6 @@ VALUES
     ('LC08','TG-020'),
     ('LC09','TG-020');
 
--- INSERT VALUE --
-
--- insert data  to Notice --
-
 INSERT INTO Notice
 VALUES
     ('N001','Faculty meeting on August 17th at 3:00 PM.','2024-08-10','LC01'),
@@ -1450,10 +1437,6 @@ VALUES
     ('N005','Guest Lecture on December 9th in the auditorium','2024-11-29','LC02'),
     ('N006','Final exam schedule for the current semester','2024-11-11','LC03'),
     ('N007','Graduation ceremony details for this year','2024-12-01','LC01');
-
--- INSERT VALUE --
-
--- insert data  to Student_notice --
 
 INSERT INTO Student_notice
 VALUES
