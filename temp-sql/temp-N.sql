@@ -1447,13 +1447,13 @@ VALUES
 
 INSERT INTO Notice
 VALUES
-    ('N001','Faculty meeting on August 15th at 3:00 PM.','2024-08-10','LC01'),
+    ('N001','Faculty meeting on August 17th at 3:00 PM.','2024-08-10','LC01'),
     ('N002','Class Cancellation on August 19th due to holiday','2024-08-15','LC05'),
     ('N003','Library closure on September 20th for maintenance','2024-08-16','LC05'),
     ('N004','Upcoming Midterm Exam Schedule', '2024-10-12','LC09'),                
-    ('N005','Guest Lecture on November 2st in the auditorium','2024-10-29','LC02'),
+    ('N005','Guest Lecture on December 9th in the auditorium','2024-11-29','LC02'),
     ('N006','Final exam schedule for the current semester','2024-11-11','LC03'),
-    ('N007','Graduation ceremony details for this year','2024-11-1','LC01');
+    ('N007','Graduation ceremony details for this year','2024-12-01','LC01');
 
 -- INSERT VALUE --
 
