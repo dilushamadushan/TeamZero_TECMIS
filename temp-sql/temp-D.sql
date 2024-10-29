@@ -274,3 +274,45 @@ END //
 DELIMITER ;
 
 CALL GetDailyAttendance('TG-004','ICT1212');
+
+-- Stored Procedure: Retrieve overall attendance summary for a specific student using student id--
+
+DELIMITER //
+CREATE PROCEDURE GetAttendanceByStudent(IN stuId VARCHAR(6))
+BEGIN
+    SELECT
+        course_code,
+        COUNT(CASE WHEN att_state = 'Present' OR medical_id  IS NOT NULL THEN 1 END) * 100.0 / 15 AS attendance_percentage,
+        IF(COUNT(CASE WHEN att_state = 'Present' OR medical_id  IS NOT NULL THEN 1 END) * 100.0 / 15 >= 80, 'Eligible', 'Not Eligible') AS eligibility
+    FROM
+        Attendence
+    WHERE
+        student_id = stuId
+    GROUP BY
+        course_code;
+END //
+
+DELIMITER ;
+
+CALL GetAttendanceByStudent('TG-001');
+
+-- Stored Procedure: Retrieve attendance and eligibility by student and course using course-code and student id--
+
+DELIMITER //
+CREATE PROCEDURE CheckAtt_ByStuId_CourseCode(IN stuId VARCHAR(6),IN cCode char(8))
+BEGIN
+    SELECT
+        course_code,
+        COUNT(CASE WHEN att_state = 'Present' OR medical_id  IS NOT NULL THEN 1 END) * 100.0 / 15 AS attendance_percentage,
+        IF(COUNT(CASE WHEN att_state = 'Present' OR medical_id  IS NOT NULL THEN 1 END) * 100.0 / 15 >= 80, 'Eligible', 'Not Eligible') AS eligibility
+    FROM
+        Attendence
+    WHERE
+        student_id = 'TG-004' AND course_code = "ICT1212"
+    GROUP BY
+        course_code;
+END //
+
+DELIMITER ;
+
+CALL CheckAtt_ByStuId_CourseCode('TG-001','ICT1212');
