@@ -183,3 +183,80 @@ ALTER TABLE Mark ADD FOREIGN KEY (course_code) REFERENCES Course(course_code);
 ALTER TABLE Attendence ADD FOREIGN KEY (course_code) REFERENCES Course(course_code);
 
 ALTER TABLE Student_notice ADD FOREIGN KEY (student_id) REFERENCES Student(student_id);
+
+--  ATTENDANCE DETAILS --
+
+-- All calculate attendance percentage excluding medical (80%) --
+
+SELECT
+     student_id,
+     course_code,
+     COUNT(CASE WHEN att_state = 'Present' THEN 1 END) * 100.0 / 15 AS "Attendance Percentage"
+FROM
+     Attendence
+GROUP BY
+     student_id, course_code;
+
+--All calculate attendance percentage including medical records (80%) --
+
+CREATE VIEW All_Attendence AS
+SELECT
+     student_id,
+     course_code,
+     COUNT(CASE WHEN att_state = 'Present' OR medical_id IS NOT NULL THEN 1 END) * 100.0 / 15 AS "Attendance Percentage"
+ FROM
+     Attendence
+ GROUP BY
+     student_id, course_code;
+
+SELECT * FROM All_Attendence
+
+-- Eligibility check without medical inclusion (80%) --
+
+SELECT
+     student_id,
+     course_code,
+     COUNT(CASE WHEN att_state = 'Present' THEN 1 END) * 100.0 / 15 AS "Attendance Percentage",
+     IF(COUNT(CASE WHEN att_state = 'Present' THEN 1 END) * 100.0 / 15 >= 80, 'Eligible', 'Not Eligible') AS Eligibility
+ FROM
+     Attendence
+ GROUP BY
+     student_id, course_code;
+
+-- Summarize attendance and eligibility with medical inclusion (80%) --
+
+CREATE VIEW AttendanceEligibilitySummary AS
+    SELECT
+        student_id,
+        course_code,
+        COUNT(CASE WHEN att_state = 'Present' OR medical_id IS NOT NULL THEN 1 END) * 100.0 / 15 AS "Attendance Percentage",
+        IF(COUNT(CASE WHEN att_state = 'Present' OR medical_id IS NOT NULL THEN 1 END) * 100.0 / 15 >= 80, 'Eligible', 'Not Eligible') AS Eligibility
+    FROM
+        Attendence
+    GROUP BY
+        student_id, course_code;
+
+
+SELECT * FROM AttendanceEligibilitySummary ;
+
+-- Stored Procedure: Retrieve attendance summary by course code --
+
+DELIMITER //
+
+CREATE PROCEDURE GetAttendanceByCourse(IN courseCode CHAR(8))
+    BEGIN
+        SELECT
+            student_id,
+            course_code,
+            COUNT(CASE WHEN att_state = 'Present' OR medical_id  IS NOT NULL THEN 1 END) * 100.0 / 15 AS attendance_percentage,
+            IF(COUNT(CASE WHEN att_state = 'Present' OR medical_id  IS NOT NULL THEN 1 END) * 100.0 / 15 >= 80, 'Eligible', 'Not Eligible') AS eligibility
+        FROM
+          Attendence
+        WHERE
+            course_code = courseCode
+        GROUP BY
+            student_id, course_code;
+    END // 
+DELIMITER ;
+
+CALL GetAttendanceByCourse('ICT1212');
