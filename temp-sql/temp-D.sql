@@ -260,3 +260,17 @@ CREATE PROCEDURE GetAttendanceByCourse(IN courseCode CHAR(8))
 DELIMITER ;
 
 CALL GetAttendanceByCourse('ICT1212');
+
+-- Stored Procedure: Retrieve daily attendance for a specific student and course --
+
+DELIMITER //
+
+CREATE PROCEDURE GetDailyAttendance(IN stuID VARCHAR(6),IN cCode char(8))
+BEGIN
+	SELECT student_id,course_code,date,att_state from Attendence
+    WHERE student_id = stuID AND course_code = cCode
+END //
+
+DELIMITER ;
+
+CALL GetDailyAttendance('TG-004','ICT1212');
