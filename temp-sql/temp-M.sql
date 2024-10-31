@@ -162,3 +162,16 @@ CREATE VIEW CA_Result_Without_Attendance AS SELECT mark_id,student_id,course_cod
                    ELSE (((mid_theory + mid_practical) / 2) * 0.25) 
                END) >= 20 THEN 'Eligible' 
         ELSE 'Not Eligible' END AS Eligibility FROM Mark;
+
+
+
+
+-- Calculate  VIEW  CA_Result_With_Attendance  
+
+
+
+CREATE VIEW CA_Result_With_Attendance AS SELECT c.course_code,c.student_id,a.Eligibility AS Attendace_Eligibility,c.Eligibility AS CA_Eligibility,
+IF(a.Eligibility='Eligible' AND c.Eligibility='Eligible','Eligible','Not Eligible') AS Eligibility
+FROM AttendanceEligibilitySummary a,CA_Result_Without_Attendance c
+WHERE a.student_id=c.student_id AND c.course_code=a.course_code
+GROUP BY c.student_id,course_code;
