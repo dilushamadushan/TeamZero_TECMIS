@@ -175,3 +175,16 @@ IF(a.Eligibility='Eligible' AND c.Eligibility='Eligible','Eligible','Not Eligibl
 FROM AttendanceEligibilitySummary a,CA_Result_Without_Attendance c
 WHERE a.student_id=c.student_id AND c.course_code=a.course_code
 GROUP BY c.student_id,course_code;
+
+
+--By giving Registration no as a summery----
+
+
+DELIMITER //
+CREATE PROCEDURE CA_Register_No(r_number VARCHAR(10))
+BEGIN
+SELECT mark_id,student_id,course_code,CA_marks FROM CA_Result_Without_Attendance 
+WHERE Eligibility='Eligible' AND student_id=r_number;
+END //
+DELIMITER ;
+CALL CA_Register_No('TG-001');
