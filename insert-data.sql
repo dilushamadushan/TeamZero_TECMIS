@@ -55,8 +55,8 @@ INSERT Admin VALUES
     ('12345678910A','A1','Administrator');
 
 INSERT INTO Department VALUES
-    ("D001"," Department of Information & Communication Technology","DE1","A1"),
-    ("D002"," Department of Engineering Technology","DE1","A1"),
+    ("D001","Department of Information & Communication Technology","DE1","A1"),
+    ("D002","Department of Engineering Technology","DE1","A1"),
     ("D003","Department of Biosystems Technology","DE1","A1"),
     ("D004","Department of Multidisciplinary Studies","DE1","A1");
 
