@@ -175,3 +175,41 @@ IF(a.Eligibility='Eligible' AND c.Eligibility='Eligible','Eligible','Not Eligibl
 FROM AttendanceEligibilitySummary a,CA_Result_Without_Attendance c
 WHERE a.student_id=c.student_id AND c.course_code=a.course_code
 GROUP BY c.student_id,course_code;
+
+
+--By giving Registration no as a summery----
+
+
+DELIMITER //
+CREATE PROCEDURE CA_Register_No(r_number VARCHAR(10))
+BEGIN
+SELECT mark_id,student_id,course_code,CA_marks FROM CA_Result_Without_Attendance 
+WHERE Eligibility='Eligible' AND student_id=r_number;
+END //
+DELIMITER ;
+CALL CA_Register_No('TG-001');
+
+
+--By giving Registration no and corse code ----
+
+DELIMITER //
+CREATE PROCEDURE CA_course_code_and_registration_no(IN r_number VARCHAR(10), IN c_code VARCHAR(10))
+BEGIN
+SELECT mark_id,student_id,CA_marks FROM CA_Result_Without_Attendance 
+WHERE Eligibility='Eligible' AND student_id=r_number AND course_code=c_code;
+END //
+DELIMITER ;
+CALL CA_course_code_and_registration_no('TG-002',' ENG1212');
+
+
+
+--By giving Corse code summary for whole batch----
+
+DELIMITER //
+CREATE PROCEDURE batch_summary(IN c_code VARCHAR(10))
+BEGIN
+SELECT mark_id,student_id,CA_marks FROM CA_Result_Without_Attendance 
+WHERE Eligibility='Eligible' AND course_code=c_code;
+END //
+DELIMITER ;
+CALL batch_summary('ENG1212');
