@@ -213,3 +213,16 @@ WHERE Eligibility='Eligible' AND course_code=c_code;
 END //
 DELIMITER ;
 CALL batch_summary('ENG1212');
+
+
+-- check each subject quize marks by using student_id----------
+
+
+
+DELIMITER //
+CREATE PROCEDURE SubjectQuizemarks (IN stID VARCHAR(20))
+BEGIN
+select  student_id,course_code,Quiz_marks from CA_Result_Without_Attendance where student_id = stID;
+END//
+DELIMITER ;
+CALL SubjectQuizemarks('TG-014');
