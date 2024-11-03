@@ -282,4 +282,19 @@ DELIMITER ;
 CALL SCAmarks('ENG1212');
 
 
+---------- Student CA marks by using student_id----------
+
+
+
+DELIMITER //
+CREATE PROCEDURE UCAmarks(IN studentc VARCHAR(20))
+BEGIN
+select student_id,course_code,CA_marks from CA_Result_Without_Attendance where student_id=studentc;
+END//
+DELIMITER ;
+
+
+CALL UCAmarks('TG-011');
+
+
 
