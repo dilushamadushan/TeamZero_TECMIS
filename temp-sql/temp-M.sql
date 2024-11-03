@@ -143,7 +143,7 @@ INSERT INTO User_contact VALUES
 -- Calculate  VIEW  CA_Result_Without_Attendance
 
 
-CREATE VIEW CA_Result_Without_Attendance AS SELECT mark_id,student_id,course_code,
+CREATE VIEW CA_Result_Without_Attendance AS SELECT mark_id,mark.student_id,course_code,
     (((quiz_1 + quiz_2 + quiz_3) - LEAST(quiz_1, quiz_2, quiz_3)) / 2) * 0.10 AS Quiz_marks,
     (assesment * 0.05) AS Assesment_marks,
     CASE 
@@ -161,7 +161,8 @@ CREATE VIEW CA_Result_Without_Attendance AS SELECT mark_id,student_id,course_cod
                    WHEN mid_practical = 0 THEN (mid_theory * 0.25) 
                    ELSE (((mid_theory + mid_practical) / 2) * 0.25) 
                END) >= 20 THEN 'Eligible' 
-        ELSE 'Not Eligible' END AS Eligibility FROM Mark;
+        ELSE 'Not Eligible' END AS Eligibility FROM Mark
+        INNER JOIN student ON mark.student_id = student.student_id WHERE state != 'suspended';
 
 
 
@@ -213,3 +214,136 @@ WHERE Eligibility='Eligible' AND course_code=c_code;
 END //
 DELIMITER ;
 CALL batch_summary('ENG1212');
+
+
+-- check each subject quize marks by using student_id----------
+
+
+
+DELIMITER //
+CREATE PROCEDURE SubjectQuizemarks (IN stID VARCHAR(20))
+BEGIN
+select  student_id,course_code,Quiz_marks from CA_Result_Without_Attendance where student_id = stID;
+END//
+DELIMITER ;
+CALL SubjectQuizemarks('TG-014');
+
+
+----all student quize marks in one subject by using course_code--------
+
+
+
+
+DELIMITER //
+CREATE PROCEDURE allstudentQuizemarks (IN subjectq VARCHAR(20))
+BEGIN
+select  student_id,course_code,Quiz_marks from CA_Result_Without_Attendance where course_code = subjectq ;
+END//
+DELIMITER ;
+CALL allstudentQuizemarks('ICT1233');
+
+
+------- one student mid exam marks by using student_id -------------
+
+
+DELIMITER //
+CREATE PROCEDURE Mid_Mark(IN  studentm VARCHAR(20) )
+BEGIN
+select student_id,course_code, Mid_marks from CA_Result_Without_Attendance where student_id= studentm;
+END//
+DELIMITER ;
+CALL Mid_Mark('TG-001');
+
+
+-------- subjectvise mid marks by using course_code ------------
+
+
+
+DELIMITER //
+CREATE PROCEDURE subjectMid_Mark(IN coursem VARCHAR(20) )
+BEGIN
+select student_id,course_code, Mid_marks from CA_Result_Without_Attendance where course_code= coursem;
+END//
+DELIMITER ;
+
+CALL subjectMid_Mark('ENG1212');
+
+
+---------- subject CA marks by using courese_code-----------
+
+
+
+DELIMITER //
+CREATE PROCEDURE SCAmarks(IN coursec VARCHAR(20))
+BEGIN
+select student_id,course_code,CA_marks from CA_Result_Without_Attendance where course_code=coursec;
+END//
+DELIMITER ;
+
+CALL SCAmarks('ENG1212');
+
+
+---------- Student CA marks by using student_id----------
+
+
+
+DELIMITER //
+CREATE PROCEDURE UCAmarks(IN studentc VARCHAR(20))
+BEGIN
+select student_id,course_code,CA_marks from CA_Result_Without_Attendance where student_id=studentc;
+END//
+DELIMITER ;
+
+
+CALL UCAmarks('TG-011');
+
+
+
+----------- Suspend student every mark updated  WH for VIEW -------- 
+
+CREATE  VIEW mark_and_student AS
+SELECT 
+    student.student_id, 
+    student.state,
+    mark.course_code,
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.quiz_1
+    END AS quiz_1,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.quiz_2
+    END AS quiz_2,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.quiz_3
+    END AS quiz_3,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.assesment
+    END AS assesment,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.mid_theory
+    END AS mid_theory,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.mid_practical
+    END AS mid_practical,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.end_theory
+    END AS end_theory,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.end_practical
+    END AS end_practical
+FROM mark
+INNER JOIN student ON mark.student_id = student.student_id;
