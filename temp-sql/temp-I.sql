@@ -58,10 +58,10 @@ VALUES
 
 INSERT Mark
 VALUES
-('M01', NUll, 62, 48, 79, 67, 82, 44, 91, 'TG-001', 'ICT1233'),
+('M01', 0, 62, 48, 79, 67, 82, 44, 91, 'TG-001', 'ICT1233'),
 ('M02', 61, 78, 40, 85, 74, 0, 39, 0, 'TG-001', 'ICT1213'),
 ('M03', 71, 65, 49, 80, 66, 84, 36, 89, 'TG-001', 'ICT1253'),
-('M04', NULL, 76, 38, 87, 64, 0, 45, 0, 'TG-001', 'ICT1242'),
+('M04', 0, 76, 38, 87, 64, 0, 45, 0, 'TG-001', 'ICT1242'),
 ('M05', 69, 73, 43, 84, 70, 0, 45, 0, 'TG-001', 'ICT1212'),
 ('M06', 63, 72, 37, 81, 0, 81, 40, 90, 'TG-001', 'ICT1222'),
 ('M07', 64, 79, 35, 78, 73, 0, 32, 0, 'TG-001', 'TCS1212'),
@@ -69,27 +69,27 @@ VALUES
 
  ('M11', 72, 82, 91, 83, 30, 48, 95, 61, 'TG-002', 'ICT1233'),
 ('M12', 74, 89, 92, 85, 34, 0, 93, 0, 'TG-002', 'ICT1213'),
-('M13', 76, NULL, 94, 84, 36, 45, 92, 60, 'TG-002', 'ICT1253'),
+('M13', 76, 0, 94, 84, 36, 45, 92, 60, 'TG-002', 'ICT1253'),
 ('M14', 73, 81, 93, 82, 31, 0, 96, 0, 'TG-002', 'ICT1242'),
 ('M15', 75, 83, 90, 86, 33, 0, 91, 0, 'TG-002', 'ICT1212'),
 ('M16', 77, 87, 95, 81, 0, 43, 94, 66, 'TG-002', 'ICT1222'),
 ('M17', 71, 84, 89, 80, 35, 0, 90, 0, 'TG-002', 'TCS1212'),
-('M18', NULL, 88, 97, 87, 38, 0, 98, 0, 'TG-002', 'ENG1212'),
+('M18', 0, 88, 97, 87, 38, 0, 98, 0, 'TG-002', 'ENG1212'),
 
- ('M19', NULL, 75, 95, 68, 46, 52, 33, 90, 'TG-003', 'ICT1233'),
+ ('M19', 0, 75, 95, 68, 46, 52, 33, 90, 'TG-003', 'ICT1233'),
 ('M20', 40, 78, 97, 69, 49, 0, 36, 0, 'TG-003', 'ICT1213'),
 ('M21', 43, 76, 98, 71, 47, 51, 34, 94, 'TG-003', 'ICT1253'),
 ('M22', 41, 74, 96, 67, 48, 0, 37, 0, 'TG-003', 'ICT1242'),
-('M23', 44, 80, 99, 72, NULL, 0, 39, 0, 'TG-003', 'ICT1212'),
+('M23', 44, 80, 99, 72, 0, 0, 39, 0, 'TG-003', 'ICT1212'),
 ('M24', 45, 79, 95, 70, 0, 49, 38, 95, 'TG-003', 'ICT1222'),
 ('M25', 42, 76, 94, 69, 45, 0, 35, 0, 'TG-003', 'TCS1212'),
 ('M26', 39, 81, 97, 70, 0, 0, 59, 0, 'TG-003', 'ENG1212'),
 
 
-('M27', 40, 88, 60, 45, 0, 68, 0, , 'TG-004', 'ICT1233'),
+('M27', 40, 88, 60, 45, 0, 68, 0,0, 'TG-004', 'ICT1233'),
 ('M28', 36, 90, 59, 49, 61, 0, 60, 0, 'TG-004', 'ICT1213'),
 ('M29', 37, 87, 55, 48, 64, 70, 62, 82, 'TG-004', 'ICT1253'),
-('M30', 39, 86, NULL, 50, 63, 0, 64, 0, 'TG-004', 'ICT1242'),
+('M30', 39, 86, 0, 50, 63, 0, 64, 0, 'TG-004', 'ICT1242'),
 ('M31', 41, 90, 58, 46, 65, 0, 65, 0, 'TG-004', 'ICT1212'),
 ('M32', 38, 85, 56, 47, 0, 70, 66, 84, 'TG-004', 'ICT1222'),
 ('M33', 36, 89, 57, 44, 62, 0, 60, 0, 'TG-004', 'TCS1212'),
@@ -225,7 +225,7 @@ VALUES
 ('M141', 48, 53, 90, 98, 99, 89, 66, 34, 'TG-020', 'TMS2022'),
 ('M142', 47, 52, 89, 99, 98, 88, 65, 33, 'TG-020', 'TMS4302'),
 ('M143', 47, 52, 89, 99, 98, 88, 65, 33, 'TG-020', 'TMS6301'),
-('M144', 47, 52, 89, 99, 98, NULL, 65, 33, 'TG-020', 'TMS6302'),
+('M144', 47, 52, 89, 99, 98, 0, 65, 33, 'TG-020', 'TMS6302'),
 ('M145', 49, 54, 91, 99, 98, 88, 65, 34, 'TG-020', 'TMS7302'),
 ('M146', 47, 52, 89, 99, 98, 88, 65, 33, 'TG-020', 'TCS1212'),
 ('M147', 47, 52, 89, 99, 98, 88, 66, 0, 'TG-020', 'ENG1212');
@@ -410,7 +410,9 @@ VALUES  ('TG-001','ICT1233'),
         ('TG-020','ENG1212');
 
 
--- VIEWS
+-- VIEWS--
+
+
 
 CREATE VIEW final_marks AS
 SELECT 
@@ -441,7 +443,33 @@ ORDER BY
 
 
 
+
+
+
+
+
+    CREATE VIEW exam_mark_without_final_mark
+SELECT
+    s.student_id,
+    m.course_code,
+    m.end_theory,
+    m.end_practical,
+    CASE
+        WHEN m.end_theory = 0 THEN m.end_practical * 0.6
+        WHEN m.end_practical = 0 THEN m.end_theory * 0.6
+        WHEN m.end_theory IS NOT NULL AND m.end_practical IS NOT NULL THEN ROUND(((end_theory + end_practical) /200)*60)
+        ELSE NULL
+    END AS final_exam_mark
+FROM mark m 
+INNER JOIN student s  ON s.student_id = m.student_id
+    WHERE s.state != 'suspended';
+
+-----------------------------------------------------------------------
+
+
 -- PROCEDURE
+
+-- viewresult_from_id
 
 DELIMITER //
 
@@ -459,6 +487,35 @@ DELIMITER ;
 
 
 -- eg      call viewresult_from_id('TG-002');
+
+
+
+-- view_result_from_departmen
+
+DELIMITER //
+
+CREATE PROCEDURE view_result_from_department(
+    IN Enter_dept_id CHAR(4)
+)
+BEGIN
+    SELECT 
+        course.dep_id,
+        final_marks.student_id,
+        course.course_code,
+        final_marks.final_result
+    FROM 
+        course
+    INNER JOIN 
+        final_marks ON course.course_code = final_marks.course_code
+    WHERE 
+        course.dep_id = Enter_dept_id;
+END //
+
+DELIMITER ;
+
+-- call view_result_from_department('D001');
+
+
 
 
 
