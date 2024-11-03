@@ -253,3 +253,18 @@ END//
 DELIMITER ;
 CALL Mid_Mark('TG-001');
 
+
+-------- subjectvise mid marks by using course_code ------------
+
+
+
+DELIMITER //
+CREATE PROCEDURE subjectMid_Mark(IN coursem VARCHAR(20) )
+BEGIN
+select student_id,course_code, Mid_marks from CA_Result_Without_Attendance where course_code= coursem;
+END//
+DELIMITER ;
+
+CALL subjectMid_Mark('ENG1212');
+
+
