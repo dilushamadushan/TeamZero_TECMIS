@@ -143,7 +143,7 @@ INSERT INTO User_contact VALUES
 -- Calculate  VIEW  CA_Result_Without_Attendance
 
 
-CREATE VIEW CA_Result_Without_Attendance AS SELECT mark_id,student_id,course_code,
+CREATE VIEW CA_Result_Without_Attendance AS SELECT mark_id,mark.student_id,course_code,
     (((quiz_1 + quiz_2 + quiz_3) - LEAST(quiz_1, quiz_2, quiz_3)) / 2) * 0.10 AS Quiz_marks,
     (assesment * 0.05) AS Assesment_marks,
     CASE 
@@ -161,7 +161,8 @@ CREATE VIEW CA_Result_Without_Attendance AS SELECT mark_id,student_id,course_cod
                    WHEN mid_practical = 0 THEN (mid_theory * 0.25) 
                    ELSE (((mid_theory + mid_practical) / 2) * 0.25) 
                END) >= 20 THEN 'Eligible' 
-        ELSE 'Not Eligible' END AS Eligibility FROM Mark;
+        ELSE 'Not Eligible' END AS Eligibility FROM Mark
+        INNER JOIN student ON mark.student_id = student.student_id WHERE state != 'suspended';
 
 
 
