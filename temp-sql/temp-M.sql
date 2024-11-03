@@ -299,3 +299,51 @@ CALL UCAmarks('TG-011');
 
 
 
+----------- Suspend student every mark updated  WH for VIEW -------- 
+
+CREATE  VIEW mark_and_student AS
+SELECT 
+    student.student_id, 
+    student.state,
+    mark.course_code,
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.quiz_1
+    END AS quiz_1,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.quiz_2
+    END AS quiz_2,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.quiz_3
+    END AS quiz_3,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.assesment
+    END AS assesment,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.mid_theory
+    END AS mid_theory,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.mid_practical
+    END AS mid_practical,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.end_theory
+    END AS end_theory,
+
+    CASE 
+        WHEN student.state = 'suspended' THEN 'WH'
+        ELSE mark.end_practical
+    END AS end_practical
+FROM mark
+INNER JOIN student ON mark.student_id = student.student_id;
