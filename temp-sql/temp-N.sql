@@ -1,4 +1,4 @@
--- create table admin--
+-- create table Technical_officer--
 -- create table Attendence--
 -- create table Lecture_student--
 -- create table notice--
@@ -1392,3 +1392,129 @@ VALUES
     ('TG-020','N005'), 
     ('TG-020','N006'), 
     ('TG-020','N007');
+
+--Grade of students
+
+CREATE VIEW Student_Grade AS 
+SELECT 
+    a.student_id, 
+    a.Course_code,
+    f.final_result,
+    
+    CASE
+        WHEN f.final_result >= 85 AND f.final_result <= 100 THEN 'A+'
+        WHEN f.final_result >= 80 AND f.final_result < 85 THEN 'A'
+        WHEN f.final_result >= 75 AND f.final_result < 80 THEN 'A-'
+        WHEN f.final_result >= 70 AND f.final_result < 75 THEN 'B+'
+        WHEN f.final_result >= 65 AND f.final_result < 70 THEN 'B'
+        WHEN f.final_result >= 60 AND f.final_result < 65 THEN 'B-'
+        WHEN f.final_result >= 55 AND f.final_result < 60 THEN 'C+'
+        WHEN f.final_result >= 50 AND f.final_result < 55 THEN 'C'
+        WHEN f.final_result >= 45 AND f.final_result < 50 THEN 'C-'
+        WHEN f.final_result >= 40 AND f.final_result < 45 THEN 'D+'
+        WHEN f.final_result >= 35 AND f.final_result < 40 THEN 'D'
+        WHEN f.final_result >= 0 AND f.final_result < 35 THEN 'F'
+    END AS Grade,
+
+    CASE
+        WHEN f.final_result >= 85 AND f.final_result <= 100 THEN 4.0
+        WHEN f.final_result >= 80 AND f.final_result < 85 THEN 4.0
+        WHEN f.final_result >= 75 AND f.final_result < 80 THEN 3.7
+        WHEN f.final_result >= 70 AND f.final_result < 75 THEN 3.3
+        WHEN f.final_result >= 65 AND f.final_result < 70 THEN 3.0
+        WHEN f.final_result >= 60 AND f.final_result < 65 THEN 2.7
+        WHEN f.final_result >= 55 AND f.final_result < 60 THEN 2.3
+        WHEN f.final_result >= 50 AND f.final_result < 55 THEN 2.0
+        WHEN f.final_result >= 45 AND f.final_result < 50 THEN 1.7
+        WHEN f.final_result >= 40 AND f.final_result < 45 THEN 1.3
+        WHEN f.final_result >= 35 AND f.final_result < 40 THEN 1.0
+        WHEN f.final_result >= 0 AND f.final_result < 35 THEN 0
+    END AS Grade_Point,
+
+    c.course_creD001  AS Credit
+
+FROM 
+    final_marks f
+INNER JOIN 
+    CA_Result_With_Attendance a ON a.Course_code = f.Course_code AND a.student_id = f.student_id
+INNER JOIN 
+    course c ON c.course_code = f.Course_code
+WHERE 
+    a.Eligibility = 'Eligible';
+
+--Grade Credit of students
+
+CREATE VIEW Student_Grade_Credit AS 
+SELECT student_id,Course_code,(Grade_Point * Credit) AS pointCreditvalue FROM 
+Student_Grade ;
+
+--Calculate SGPA
+
+CREATE VIEW SGPA AS
+SELECT s.student_id,(SUM(s.pointCreditvalue))/ SUM(s.Credit) AS SGPA
+FROM Student_Grade_Credit s
+INNER JOIN Course c  ON s.course_code = c.course_code 
+WHERE c.dep_id='D001' OR c.dep_id='D004'
+GROUP BY s.student_id;
+
+--Calculate CGPA
+
+CREATE VIEW CGPA AS
+SELECT s.student_id,(SUM(s.pointCreditvalue))/ SUM(s.Credit) AS CGPA
+FROM Student_Grade_Credit s
+INNER JOIN Course c ON s.course_code = c.course_code 
+WHERE c.dep_id='D001' AND c.course_code != 'ENG1212'
+GROUP BY s.student_id;
+
+--Calculate GPA
+CREATE VIEW ALL_GPA AS 
+SELECT s.Student_ID,s.SGPA,c.CGPA FROM SGPA s,CGPA c
+WHERE s.Student_ID=c.Student_ID;
+
+--view all notice
+SELECT date,description AS 'Notice'
+FROM notice 
+ORDER BY Date ;
+
+--view Notice published by Lecturer
+DELIMITER//
+
+CREATE PROCEDURE ViewLecturerNotice(IN lecture_id VARCHAR(5))
+BEGIN
+    SELECT date, description AS 'Notice'
+    FROM notice
+    WHERE notice.lecture_id = lecture_id; 
+END //
+
+DELIMITER ;
+
+CALL ViewLecturerNotice ('LC01');
+
+-- --view user details
+
+-- SELECT CONCAT(u.f_name,' ',u.l_name) AS Tech_officer_USER_NAME,t.tech_officer_id,u.nic
+-- FROM technical_officer t,User u 
+-- WHERE t.nic = u.nic;
+
+-- SELECT CONCAT(u.f_name,' ',u.l_name) AS Lecture_USER_NAME,l.lecture_id,u.nic
+-- FROM lecture l,User u 
+-- WHERE l.nic = u.nic;
+
+-- SELECT CONCAT(u.f_name,' ',u.l_name) AS Student_USER_NAME,s.student_id,u.nic
+-- FROM student s,User u 
+-- WHERE s.nic = u.nic;
+
+-- SELECT CONCAT(u.f_name,' ',u.l_name) AS Admin_USER_NAME,a.admin_id,u.nic
+-- FROM admin a,User u 
+-- WHERE a.nic = u.nic;
+
+-- SELECT CONCAT(u.f_name,' ',u.l_name) AS Dean_USER_NAME,d.dean_id,u.nic
+-- FROM dean d,User u 
+-- WHERE d.nic = u.nic;
+
+
+
+
+
+
+
