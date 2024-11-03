@@ -226,3 +226,17 @@ select  student_id,course_code,Quiz_marks from CA_Result_Without_Attendance wher
 END//
 DELIMITER ;
 CALL SubjectQuizemarks('TG-014');
+
+
+----all student quize marks in one subject by using course_code--------
+
+
+
+
+DELIMITER //
+CREATE PROCEDURE allstudentQuizemarks (IN subjectq VARCHAR(20))
+BEGIN
+select  student_id,course_code,Quiz_marks from CA_Result_Without_Attendance where course_code = subjectq ;
+END//
+DELIMITER ;
+CALL allstudentQuizemarks('ICT1233');
