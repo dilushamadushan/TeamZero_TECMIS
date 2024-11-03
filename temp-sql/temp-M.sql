@@ -213,3 +213,88 @@ WHERE Eligibility='Eligible' AND course_code=c_code;
 END //
 DELIMITER ;
 CALL batch_summary('ENG1212');
+
+
+-- check each subject quize marks by using student_id----------
+
+
+
+DELIMITER //
+CREATE PROCEDURE SubjectQuizemarks (IN stID VARCHAR(20))
+BEGIN
+select  student_id,course_code,Quiz_marks from CA_Result_Without_Attendance where student_id = stID;
+END//
+DELIMITER ;
+CALL SubjectQuizemarks('TG-014');
+
+
+----all student quize marks in one subject by using course_code--------
+
+
+
+
+DELIMITER //
+CREATE PROCEDURE allstudentQuizemarks (IN subjectq VARCHAR(20))
+BEGIN
+select  student_id,course_code,Quiz_marks from CA_Result_Without_Attendance where course_code = subjectq ;
+END//
+DELIMITER ;
+CALL allstudentQuizemarks('ICT1233');
+
+
+------- one student mid exam marks by using student_id -------------
+
+
+DELIMITER //
+CREATE PROCEDURE Mid_Mark(IN  studentm VARCHAR(20) )
+BEGIN
+select student_id,course_code, Mid_marks from CA_Result_Without_Attendance where student_id= studentm;
+END//
+DELIMITER ;
+CALL Mid_Mark('TG-001');
+
+
+-------- subjectvise mid marks by using course_code ------------
+
+
+
+DELIMITER //
+CREATE PROCEDURE subjectMid_Mark(IN coursem VARCHAR(20) )
+BEGIN
+select student_id,course_code, Mid_marks from CA_Result_Without_Attendance where course_code= coursem;
+END//
+DELIMITER ;
+
+CALL subjectMid_Mark('ENG1212');
+
+
+---------- subject CA marks by using courese_code-----------
+
+
+
+DELIMITER //
+CREATE PROCEDURE SCAmarks(IN coursec VARCHAR(20))
+BEGIN
+select student_id,course_code,CA_marks from CA_Result_Without_Attendance where course_code=coursec;
+END//
+DELIMITER ;
+
+CALL SCAmarks('ENG1212');
+
+
+---------- Student CA marks by using student_id----------
+
+
+
+DELIMITER //
+CREATE PROCEDURE UCAmarks(IN studentc VARCHAR(20))
+BEGIN
+select student_id,course_code,CA_marks from CA_Result_Without_Attendance where student_id=studentc;
+END//
+DELIMITER ;
+
+
+CALL UCAmarks('TG-011');
+
+
+
