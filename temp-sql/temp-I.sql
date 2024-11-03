@@ -448,7 +448,7 @@ ORDER BY
 
 
 
-    CREATE VIEW exam_mark_without_final_mark
+CREATE VIEW exam_mark_without_final_mark AS
 SELECT
     s.student_id,
     m.course_code,
@@ -474,7 +474,7 @@ INNER JOIN student s  ON s.student_id = m.student_id
 DELIMITER //
 
 CREATE PROCEDURE viewresult_from_id(
-    IN id_number VARCHAR(20)
+    IN id_number VARCHAR(5)
 )
 BEGIN
     SELECT DISTINCT course_code, final_result

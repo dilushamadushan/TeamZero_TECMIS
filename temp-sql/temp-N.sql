@@ -1445,7 +1445,7 @@ WHERE
 --Grade Credit of students
 
 CREATE VIEW Student_Grade_Credit AS 
-SELECT student_id,Course_code,(Grade_Point * Credit) AS pointCreditvalue FROM 
+SELECT student_id,Credit,Course_code,(Grade_Point * Credit) AS pointCreditvalue FROM 
 Student_Grade ;
 
 --Calculate SGPA
@@ -1477,7 +1477,7 @@ FROM notice
 ORDER BY Date ;
 
 --view Notice published by Lecturer
-DELIMITER//
+DELIMITER //
 
 CREATE PROCEDURE ViewLecturerNotice(IN lecture_id VARCHAR(5))
 BEGIN
