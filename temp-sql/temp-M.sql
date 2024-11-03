@@ -240,3 +240,16 @@ select  student_id,course_code,Quiz_marks from CA_Result_Without_Attendance wher
 END//
 DELIMITER ;
 CALL allstudentQuizemarks('ICT1233');
+
+
+------- one student mid exam marks by using student_id -------------
+
+
+DELIMITER //
+CREATE PROCEDURE Mid_Mark(IN  studentm VARCHAR(20) )
+BEGIN
+select student_id,course_code, Mid_marks from CA_Result_Without_Attendance where student_id= studentm;
+END//
+DELIMITER ;
+CALL Mid_Mark('TG-001');
+
