@@ -347,3 +347,21 @@ SELECT
     END AS end_practical
 FROM mark
 INNER JOIN student ON mark.student_id = student.student_id;
+
+
+
+----------- Repeat student final garde VIEW-----------------
+
+
+CREATE  VIEW repeat_final_grade AS
+SELECT 
+    student.student_id, 
+    student.state,
+    Student_Grade.Course_code,
+    Student_Grade.final_result,
+    CASE 
+        WHEN student.state = 'repeat' THEN 'C'
+        ELSE Student_Grade.Grade
+    END AS Grade
+    FROM Student_Grade
+    INNER JOIN student ON Student_Grade.student_id = student.student_id;
