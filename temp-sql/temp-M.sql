@@ -268,3 +268,18 @@ DELIMITER ;
 CALL subjectMid_Mark('ENG1212');
 
 
+---------- subject CA marks by using courese_code-----------
+
+
+
+DELIMITER //
+CREATE PROCEDURE SCAmarks(IN coursec VARCHAR(20))
+BEGIN
+select student_id,course_code,CA_marks from CA_Result_Without_Attendance where course_code=coursec;
+END//
+DELIMITER ;
+
+CALL SCAmarks('ENG1212');
+
+
+
