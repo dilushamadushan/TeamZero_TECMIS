@@ -90,7 +90,7 @@ ORDER BY
 
 --Final mark without CA mark -- 
 
-CREATE VIEW exam_mark_without_final_mark
+CREATE VIEW exam_mark_without_final_mark AS
 SELECT
     s.student_id,
     m.course_code,
