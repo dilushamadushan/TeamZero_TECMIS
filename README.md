@@ -1,7 +1,7 @@
 # TECLMS-TECMIS System
 ***
 
-<p>This project is a Student Management System designed for the Faculty of Technology. It allows administrators, deans, lecturers, technical officers, and students to manage and view student details, course information, attendance, and exam results.</p>
+<p>This project is part of an assignment to build a basic a Student Management System designed for the Faculty of Technology. It allows administrators, deans, lecturers, technical officers, and students to manage and view student details, course information, attendance, and exam results.</p>
 
 ### 🤖 Project Overview
 
@@ -157,3 +157,4 @@ The `Department` table stores information about Department.
 | admin_id | varchar(10) | YES  | MUL | NULL    |
 
 
+Don't forget to hit the :star: if you like this repo.
