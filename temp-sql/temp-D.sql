@@ -124,13 +124,13 @@ CREATE USER 'student'@'localhost' IDENTIFIED BY 'student123';
 
 -- PRIVILAGES AND GRANT OPTION --
 
-GRANT ALL PRIVILEGES ON teamZero.* TO 'admin'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
-GRANT ALL PRIVILEGES ON teamZero.* TO 'dean'@'localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'dean'@'localhost';
 FLUSH PRIVILEGES;
 
-GRANT ALL PRIVILEGES ON teamZero.* TO 'lecturer'@'localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'lecturer'@'localhost';
 FLUSH PRIVILEGES;
 
 GRANT SELECT,INSERT,UPDATE ON teamZero.attendence TO 'techofficer'@'localhost';
