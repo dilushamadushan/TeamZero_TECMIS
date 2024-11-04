@@ -24,7 +24,7 @@ CREATE TABLE
     Course(
         course_code char(8) PRIMARY KEY,
         course_name varchar(20),
-        course_creD001 INT,
+        course_credit INT,
         course_houre INT,
         course_type varchar(15) NOT NULL,
         dep_id CHAR(4)
