@@ -193,7 +193,7 @@ SELECT
         WHEN f.final_result >= 0 AND f.final_result < 35 THEN 0
     END AS Grade_Point,
 
-    c.course_creD001  AS Credit
+    c.course_credit  AS Credit
 
 FROM 
     final_marks f
